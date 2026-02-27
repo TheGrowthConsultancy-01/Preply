@@ -18,4 +18,10 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      // Hostinger/Linux compatibility ke liye ye zaroori hai
+      external: ['@rollup/rollup-linux-x64-gnu'], 
+    },
+  },
 }));
