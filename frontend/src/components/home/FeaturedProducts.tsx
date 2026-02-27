@@ -19,10 +19,10 @@ const products = [
     whatsapp: "Chinab Sofa",
   },
   {
-    name: "Construction Shuttering Sheets",
-    desc: "Reusable, waterproof sheets with a long lifecycle — the sustainable construction alternative.",
-    image: plasticSheets,
-    whatsapp: "Construction Shuttering Sheets",
+    name: "Awards & Mementos",
+    desc: "Transforming recycled plastic waste into meaningful awards and mementos that celebrate achievements while promoting sustainability and responsible innovation.",
+    image: furniture,
+    whatsapp: "Awards & Mementos",
   },
   {
     name: "Coffee Table",
@@ -36,11 +36,18 @@ const products = [
     image: plasticSheets,
     whatsapp: "Sustainable Handcarts",
   },
+  // {
+  //   name: "Custom Furniture",
+  //   desc: "Design your own furniture using our recycled plastic sheets. Fully customizable.",
+  //   image: furniture,
+  //   whatsapp: "Custom Furniture",
+  // },
+  
   {
-    name: "Custom Furniture",
-    desc: "Design your own furniture using our recycled plastic sheets. Fully customizable.",
-    image: furniture,
-    whatsapp: "Custom Furniture",
+    name: "Construction Shuttering Sheets",
+    desc: "Reusable, waterproof sheets with a long lifecycle — the sustainable construction alternative.",
+    image: plasticSheets,
+    whatsapp: "Construction Shuttering Sheets",
   },
 ];
 

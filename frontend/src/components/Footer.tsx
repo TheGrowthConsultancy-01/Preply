@@ -44,6 +44,7 @@ const Footer = () => {
               <span>Wrapper Bin</span>
               <span>Chinab Sofa</span>
               <span>Coffee Table</span>
+              <span>Awards & Mementos</span>
               <span>Sustainable Handcarts</span>
               <span>Shuttering Sheets</span>
               <span>Custom Furniture</span>
@@ -70,14 +71,35 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-background/40 text-sm">
-            © {new Date().getFullYear()} PREPLY India Pvt Ltd. All rights reserved.
-          </p>
-          <p className="text-background/40 text-sm">
-            Transforming waste into sustainable futures.
-          </p>
-        </div>
+        {/* Bottom Section */}
+<div className="border-t border-background/10 mt-12 pt-8 flex flex-col gap-6">
+  
+  {/* Row 1: Copyright (Left) & Transforming Text (Right) */}
+  <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+    <p className="text-background/40 text-sm">
+      © {new Date().getFullYear()} PREPLY India Pvt Ltd. All rights reserved.
+    </p>
+    <p className="text-background/40 text-sm ">
+      Transforming waste into sustainable futures.
+    </p>
+  </div>
+
+  {/* Row 2: Made with ❤️ Line (Center and Below) */}
+  <div className="text-[10px] md:text-xs tracking-widest uppercase text-center border-t border-background/5 pt-4">
+    <span className="text-background/40">Made with </span>
+    <span className="text-primary animate-pulse inline-block mx-1">❤️</span>
+    <span className="text-background/40"> by </span>
+    <a
+      href="https://thegrowthconsultancy.in"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary font-bold transition-all duration-300 hover:brightness-125 underline-offset-4 hover:underline"
+    >
+      THE GROWTH CONSULTANCY
+    </a>
+  </div>
+
+</div>
       </div>
     </footer>
   );

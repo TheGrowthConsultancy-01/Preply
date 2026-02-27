@@ -167,7 +167,18 @@ const GVPSection = () => {
                   Enquire About GVP Products
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-display" asChild>
+              {/* <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-display" asChild>
+                <Link to="/impact">
+                  Learn More
+                  <ArrowRight size={16} className="ml-2" />
+                </Link>
+              </Button> */}
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-primary-foreground/30 bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20 font-display" 
+                asChild
+              >
                 <Link to="/impact">
                   Learn More
                   <ArrowRight size={16} className="ml-2" />
