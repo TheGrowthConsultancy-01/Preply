@@ -13,6 +13,7 @@ const products = [
     whatsapp: "Wrapper Bin",
   },
   {
+    id: "chinab-sofa",
     name: "Chinab Sofa",
     desc: "Inspired by the engineering strength of the Chinab River Bridge — engineered waste plastic strength.",
     image: furniture,
@@ -78,14 +79,14 @@ const FeaturedProducts = () => {
               key={product.name}
               className="group bg-card rounded-xl overflow-hidden shadow-premium hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="relative h-56 overflow-hidden">
+              <Link to={`/product/${product.id}`} className="block relative h-56 overflow-hidden cursor-pointer">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
-              </div>
+              </Link>
               <div className="p-6">
                 <h3 className="font-display font-semibold text-lg text-foreground mb-2">{product.name}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-5">{product.desc}</p>

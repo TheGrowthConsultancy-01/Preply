@@ -15,6 +15,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import { Scroll } from "lucide-react";
 import ScrollToTop from "./components/ScrollToTop";
+import ProductDetail from "./pages/ProductDetail";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,7 @@ const App = () => (
           <Route path="/impact" element={<Impact />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/product/:productId" element={<ProductDetail />} /> {/* Dynamic Route */}
         </Routes>
         <Footer />
         <WhatsAppSticky />
