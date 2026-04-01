@@ -307,7 +307,7 @@ const ProductDetail = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
-          className="text-lg md:text-xl text-white/80 font-light border-l-2 border-[#A3E635] pl-4 whitespace-nowrap md:whitespace-normal"
+          className="text-lg md:text-xl text-white/80 font-light whitespace-nowrap md:whitespace-normal"
         >
           Engineered from recycled plastic, built for <span className="font-medium text-white">modern living.</span>
         </motion.p>
