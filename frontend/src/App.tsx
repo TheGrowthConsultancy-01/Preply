@@ -34,8 +34,9 @@ const App = () => (
           <Route path="/plastic-sheets" element={<PlasticSheets />} />
           <Route path="/impact" element={<Impact />} />
           <Route path="/contact" element={<Contact />} />
+            <Route path="/product/:productId" element={<ProductDetail />} /> {/* Dynamic Route */}
           <Route path="*" element={<NotFound />} />
-          <Route path="/product/:productId" element={<ProductDetail />} /> {/* Dynamic Route */}
+        
         </Routes>
         <Footer />
         <WhatsAppSticky />
