@@ -238,6 +238,7 @@ const ProductDetail = () => {
     product?.image3 || product?.image4 || "",
   ];
 
+  const [isExpanded, setIsExpanded] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -258,7 +259,7 @@ const ProductDetail = () => {
   return (
     <div className="flex flex-col overflow-hidden bg-white w-full">
       
-      {/* SECTION 1: HERO */}
+      {/* SECTION 1: HERO
       <section 
         className="relative h-[75vh] md:h-[85vh] flex items-center bg-cover bg-center transition-all duration-1000" 
         style={{ backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url(${product.heroImage || product.image})` }}
@@ -280,8 +281,40 @@ const ProductDetail = () => {
             {product.tagline}
           </motion.p>
         </div>
-      </section>
+      </section> */}
 
+      {/* SECTION 1: HERO - Bottom Left Aligned */}
+{/* SECTION 1: HERO - Compact Text & Single Line Subtext */}
+{/* SECTION 1: HERO - Gap Removed from Bottom */}
+<section 
+  className="relative h-[70vh] md:h-[80vh] flex items-end pb-0 bg-cover bg-center transition-all duration-1000" 
+  style={{ 
+    backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage || product.image})` 
+  }}
+>
+  <div className="container mx-auto px-6 lg:px-12 pb-8"> {/* Container mein thoda sa bottom padding (pb-8) rakha hai taaki text ekdum edge pe na lage, aap ise bhi 0 kar sakte ho */}
+    <div className="max-w-5xl">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight font-display mb-4">
+          Introducing <span className="text-[#A3E635]">Chinab Sofa</span>
+        </h1>
+        
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="text-lg md:text-xl text-white/80 font-light border-l-2 border-[#A3E635] pl-4 whitespace-nowrap md:whitespace-normal"
+        >
+          Engineered from recycled plastic, built for <span className="font-medium text-white">modern living.</span>
+        </motion.p>
+      </motion.div>
+    </div>
+  </div>
+</section>
       {/* SECTION 2: PRODUCT STORY */}
       <section className="py-24 lg:py-32 bg-[#DCEDC8]/40 border-y border-green-100"> 
         <div className="container mx-auto px-6 lg:px-12">
@@ -323,7 +356,7 @@ const ProductDetail = () => {
       </section>
 
       {/* SECTION 3: ABOUT */}
-      <section className="py-24 md:py-32 w-full overflow-visible bg-white relative z-0">
+      {/* <section className="py-24 md:py-32 w-full overflow-visible bg-white relative z-0">
         <div className="max-w-[1400px] mx-auto px-6 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             <div className="order-2 lg:order-1 lg:col-span-5 relative z-10">
@@ -340,7 +373,7 @@ const ProductDetail = () => {
                 {product.fullDesc}
               </p>
               <Button className="bg-[#0F172A] hover:bg-[#1e293b] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-2">
-                Get Quotation <ArrowRight size={18} />
+                Read More <ArrowRight size={18} />
               </Button>
             </div>
 
@@ -374,8 +407,73 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* SECTION 3: ABOUT - Using your existing Button for toggle */}
+<section className="py-24 md:py-32 w-full overflow-visible bg-white relative z-0">
+  <div className="max-w-[1400px] mx-auto px-6 relative">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="order-2 lg:order-1 lg:col-span-5 relative z-10">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-10 h-[2px] bg-[#A3E635]"></div>
+          <span className="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">
+            Sustainable Engineering
+          </span>
+        </div>
+        
+        <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-slate-900 leading-[1.1]">
+          Redefining the <br/> Future with {product.name}
+        </h2>
 
+        {/* Text Container with Truncate Logic */}
+        <p className="text-slate-600 leading-relaxed text-lg text-justify mb-10 border-l-4 border-slate-100 pl-6 italic">
+          {isExpanded 
+            ? product.fullDesc 
+            : `${product.fullDesc.substring(0, 150)}...`
+          }
+        </p>
+
+        {/* Using your provided Button with onClick toggle */}
+        <Button 
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="bg-[#0F172A] hover:bg-[#1e293b] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-2"
+        >
+          {isExpanded ? "Show Less" : "Read More"} 
+          <ArrowRight size={18} className={`${isExpanded ? "-rotate-90" : "rotate-0"} transition-transform`} />
+        </Button>
+      </div>
+
+      {/* Right Side Images - Unchanged */}
+      <div className="order-1 lg:order-2 lg:col-span-7 relative h-[450px] md:h-[550px] lg:h-[600px] w-full max-w-[700px] mx-auto lg:mx-0">
+        <div className="absolute top-0 left-0 w-[90%] h-[80%] overflow-hidden rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-0 border border-slate-50">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={`bg-${currentIndex}`}
+              src={sliderImages[currentIndex]}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="w-full h-full object-cover" 
+            />
+          </AnimatePresence>
+        </div>
+        <div className="absolute bottom-[-10px] right-0 translate-x-[20%] md:translate-x-[30%] w-[55%] h-[50%] overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] border-[12px] border-white z-10 hidden md:block">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={`fg-${currentIndex}`}
+              src={sliderImages[(currentIndex + 1) % sliderImages.length]}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 40 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="w-full h-full object-cover"
+            />
+          </AnimatePresence>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
     {/* SECTION 4: FEATURES - Full Image Block on Hover */}
 <section className="relative py-24 lg:py-32 overflow-hidden bg-slate-950">
   {/* 1. Background Image - Normal state mein clear dikhegi */}
@@ -392,19 +490,22 @@ const ProductDetail = () => {
 
   <div className="container mx-auto px-6 lg:px-12 relative z-10">
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.7 }}
-      className="text-center max-w-3xl mx-auto mb-20"
-    >
-      {/* <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#A3E635] [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] mb-4">
-        Features
-      </p> */}
-      <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight [text-shadow:0_4px_15px_rgba(0,0,0,1)]">
-        Built Different. Built Better.
-      </h2>
-    </motion.div>
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-100px" }}
+  transition={{ duration: 0.7 }}
+  className="text-center max-w-3xl mx-auto mb-20"
+>
+  {/* Chinab Sofa - Accent Color, No Shadow */}
+  <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
+    Chinab Sofa
+  </h2>
+  
+  {/* Sub-heading - Pure White, No Shadow */}
+  <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight opacity-90">
+    Built Different. Built Better.
+  </h3>
+</motion.div>
 
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
       {features.map((f, i) => (
@@ -497,54 +598,57 @@ const ProductDetail = () => {
 </section> */}
 
       {/* SECTION 5: COMPARISON TABLE */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="container mx-auto px-6 lg:px-12 max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
-            className="text-center mb-16"
-          >
-            {/* <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#2E7D32] mb-4">Comparison</p> */}
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
-              Why Preply Outperforms Wood
-            </h2>
-          </motion.div>
+      {/* SECTION 5: COMPARISON TABLE - Width Matched with Heading */}
+<section className="py-24 lg:py-32 bg-white">
+  {/* max-w-4xl ko hata kar max-w-fit kiya taaki container sirf text/table jitna hi failay */}
+  <div className="container mx-auto px-6 lg:px-12 max-w-fit"> 
+    
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7 }}
+      className="text-center mb-16"
+    >
+      {/* whitespace-nowrap text ko ek line mein rakhega */}
+      <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-900 whitespace-nowrap">
+        Reinventing Furniture Beyond Wood
+      </h2>
+    </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="overflow-hidden rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50"
-          >
-            <table className="w-full text-sm md:text-base border-collapse">
-              <thead>
-                <tr className="bg-[#0F172A] text-white">
-                  <th className="text-left p-6 font-semibold">Feature</th>
-                  <th className="text-center p-6 font-semibold bg-[#1e293b]">Preply Ply Sheet</th>
-                  <th className="text-center p-6 font-semibold">Traditional Wood</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((row, i) => (
-                  <tr key={row.feature} className={`${i % 2 === 0 ? "bg-slate-50/50" : "bg-white"} border-t border-slate-100`}>
-                    <td className="p-6 font-medium text-slate-700">{row.feature}</td>
-                    <td className="p-6 text-center font-bold text-[#2E7D32] bg-green-50/30">
-                      {renderValue(row.preply)}
-                    </td>
-                    <td className="p-6 text-center text-slate-500">
-                      {renderValue(row.wood)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </motion.div>
-        </div>
-      </section>
-
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      
+      className="overflow-hidden rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50"
+    >
+      <table className="w-full text-sm md:text-base border-collapse">
+        <thead>
+          <tr className="bg-[#0F172A] text-white">
+            <th className="text-left p-6 font-semibold whitespace-nowrap">Feature</th>
+            <th className="text-center p-6 font-semibold bg-[#1e293b] whitespace-nowrap">Chinab Sofa</th>
+            <th className="text-center p-6 font-semibold whitespace-nowrap">Traditional Wood Furniture</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, i) => (
+            <tr key={row.feature} className={`${i % 2 === 0 ? "bg-slate-50/50" : "bg-white"} border-t border-slate-100`}>
+              <td className="p-6 font-medium text-slate-700">{row.feature}</td>
+              <td className="p-6 text-center font-bold text-[#2E7D32] bg-green-50/30">
+                {renderValue(row.preply)}
+              </td>
+              <td className="p-6 text-center text-slate-500">
+                {renderValue(row.wood)}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </motion.div>
+  </div>
+</section>
       {/* SECTION 6: USE CASES */}
       <section className="py-24 lg:py-32 bg-[#F1F8F5] border-t border-green-50">
         <div className="container mx-auto px-6 lg:px-12">
@@ -557,7 +661,7 @@ const ProductDetail = () => {
           >
             {/* <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#2E7D32] mb-4">Applications</p> */}
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
-              One Sofa. Infinite Possibilities.
+              One Chinab Sofa. Infinite Possibilities.
             </h2>
           </motion.div>
 

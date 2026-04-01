@@ -11,7 +11,7 @@ export const products = [
     name: "Chinab Sofa",
     tagline: "BUILDS CONFIDENCE",
     desc: "Inspired by the engineering strength of the Chinab River Bridge...",
-    fullDesc: "Suntree Woods Pvt. Ltd. is a company headquartered in Ernakulam, Kerala...", // Image 2 wala text
+    fullDesc: "Engineered from recycled plastic waste, the Chinab Sofa redefines modern furniture with a smarter, more sustainable approach. Built to outperform traditional wood, it offers superior durability, resistance to moisture, and long-term reliability without compromising on aesthetics. This is not just furniture, it’s a forward-thinking solution for businesses that value innovation and responsibility.", // Image 2 wala text
     image: productsFurniture,
     image2: wasteCollection, // Image 2 background
     image3: heroFactory, // Image 3 background
