@@ -79,13 +79,17 @@ const FeaturedProducts = () => {
               key={product.name}
               className="group bg-card rounded-xl overflow-hidden shadow-premium hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
             >
-              <Link to={`/product/${product.id}`} className="block relative h-56 overflow-hidden cursor-pointer">
+              {/* <Link to={`/product/${product.id}`} className="block relative h-56 overflow-hidden cursor-pointer"> */}
+              <Link 
+  to={`/product/${product.id}`} 
+  className="relative z-[999] block h-56 overflow-hidden cursor-pointer" // z-999 add kiya
+>
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent pointer-events-none" />
               </Link>
               <div className="p-6">
                 <h3 className="font-display font-semibold text-lg text-foreground mb-2">{product.name}</h3>
