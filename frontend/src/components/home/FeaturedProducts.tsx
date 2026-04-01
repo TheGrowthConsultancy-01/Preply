@@ -81,7 +81,7 @@ const FeaturedProducts = () => {
             >
               {/* <Link to={`/product/${product.id}`} className="block relative h-56 overflow-hidden cursor-pointer"> */}
               <Link 
-  to={`/product/${product.id}`} 
+  to={`/product/${product.id}`} onClick={()=> console.log("Clicked")}
   className="relative z-[999] block h-56 overflow-hidden cursor-pointer" // z-999 add kiya
 >
                 <img
