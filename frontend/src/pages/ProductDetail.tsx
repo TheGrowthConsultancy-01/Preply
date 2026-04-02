@@ -408,7 +408,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </section> */}
-      {/* SECTION 3: ABOUT - Using your existing Button for toggle */}
+      {/* SECTION 3: ABOUT - Full Description & WhatsApp Inquiry */}
 <section className="py-24 md:py-32 w-full overflow-visible bg-white relative z-0">
   <div className="max-w-[1400px] mx-auto px-6 relative">
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
@@ -424,22 +424,27 @@ const ProductDetail = () => {
           Redefining the <br/> Future with {product.name}
         </h2>
 
-        {/* Text Container with Truncate Logic */}
+        {/* Full Text - No Toggle */}
         <p className="text-slate-600 leading-relaxed text-lg text-justify mb-10 border-l-4 border-slate-100 pl-6 italic">
-          {isExpanded 
-            ? product.fullDesc 
-            : `${product.fullDesc.substring(0, 150)}...`
-          }
+          {product.fullDesc}
         </p>
 
-        {/* Using your provided Button with onClick toggle */}
-        <Button 
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="bg-[#0F172A] hover:bg-[#1e293b] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-2"
-        >
-          {isExpanded ? "Show Less" : "Read More"} 
-          <ArrowRight size={18} className={`${isExpanded ? "-rotate-90" : "rotate-0"} transition-transform`} />
-        </Button>
+        {/* WhatsApp Inquiry Button */}
+     <Button 
+  variant="default" 
+  size="lg" 
+  className="bg-[#166534] hover:bg-[#14532D] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105"
+  asChild
+>
+  <a
+    href="https://wa.me/919999999999?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20products.%20Please%20share%20details."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center gap-2"
+  >
+    WhatsApp Enquiry
+  </a>
+</Button>
       </div>
 
       {/* Right Side Images - Unchanged */}
