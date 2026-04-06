@@ -32,6 +32,7 @@ const products = [
     whatsapp: "Coffee Table",
   },
   {
+    id:"hawker",
     name: "Sustainable Handcarts",
     desc: "Empowering small-scale industries with durable, maintenance-free sustainable carts.",
     image: plasticSheets,

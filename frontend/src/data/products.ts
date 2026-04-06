@@ -4,6 +4,7 @@ import wasteCollection from "@/assets/waste-collection.jpg";
 import heroFactory from "@/assets/hero-factory.jpg";
 import plasticSheets from "@/assets/plastic-sheets.jpg";
 import heroSofaImage from "@/assets/hero-sofa.jpg"; 
+import hawkerbg from "@/assets/hawker-bg.png";
 
 export const products = [
   {
@@ -19,6 +20,20 @@ export const products = [
     heroImage: productsFurniture, // Image 1 background
     whatsapp: "Chinab Sofa",
     features: ["BWP Grade", "BWR (IS-303)", "MR Grade"] // Image 3 categories
+  },
+
+  {
+    id: "hawker",
+    name: "Hawker",
+    tagline: "STRENGTH IN EVERY MOVE",
+    desc: "Heavy-duty sustainable furniture built for mobility and extreme conditions.",
+    fullDesc: "Preply’s Sustainable Handcart is not just a product it’s a new standard for street vending. Crafted using advanced plastic plysheets made from recycled waste, this handcart replaces traditional wood with a smarter, more durable, and future-ready alternative.",
+    image: "/path-to-hawker-image.jpg", 
+    image2: "/path-to-hawker-process.jpg", 
+    image3: "/path-to-hawker-texture.jpg",
+    image4: "/path-to-hawker-final.jpg",
+    heroImage: hawkerbg,
+    whatsapp: "Hawker Product"
   },
   // baki products...
 ];
