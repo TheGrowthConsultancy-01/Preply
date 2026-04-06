@@ -2,14 +2,15 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heroImage from "@/assets/hero-factory.jpg";
+import herobanner from "@/assets/hero-banner.png";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heroImage} alt="PREPLY manufacturing facility transforming plastic waste into sheets" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-hero-gradient opacity-85" />
+        <img src={herobanner} alt="PREPLY manufacturing facility transforming plastic waste into sheets" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-hero-gradient opacity-30" />
       </div>
 
       <div className="container relative z-10 pt-32 pb-20">

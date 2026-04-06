@@ -2,10 +2,11 @@ import { MessageCircle } from "lucide-react";
 import plasticSheets from "@/assets/plastic-sheets.jpg";
 import furniture from "@/assets/products-furniture.jpg";
 import wasteCollection from "@/assets/waste-collection.jpg";
+import chinabsofahero from "@/assets/chinabsofa-hero.png";
 
 const products = [
   { name: "Wrapper Bin", desc: "Made from chocolate wrapper plastic waste collected via NGOs like Wastevoltaic Foundation from schools and communities. Each bin tells a story of community-driven change.", image: wasteCollection, cta: "Adopt a Wrapper Bin" },
-  { name: "Chinab Sofa", desc: "Inspired by the engineering strength of the Chinab River Bridge. Isometric design with plantation option, weather resistant, and a statement in sustainable furniture innovation.", image: furniture, cta: "Enquire Now" },
+  { name: "Chinab Sofa", desc: "Inspired by the engineering strength of the Chinab River Bridge. Isometric design with plantation option, weather resistant, and a statement in sustainable furniture innovation.", image: chinabsofahero, cta: "Enquire Now" },
   { name: "Coffee Table", desc: "Minimal furniture crafted from recycled plastic sheets. Modern design meets environmental responsibility — a centerpiece with purpose.", image: furniture, cta: "Enquire Now" },
   {name: "Awards & Mementos",desc: "Transforming recycled plastic waste into meaningful awards and mementos that celebrate achievements while promoting sustainability and responsible innovation.",image: furniture,cta: "Awards & Mementos"},
   { name: "Sustainable Handcarts", desc: "Empowering small-scale industries with durable sustainable carts. High load capacity, exceptional longevity, and completely maintenance-free.", image: plasticSheets, cta: "Enquire Now" },

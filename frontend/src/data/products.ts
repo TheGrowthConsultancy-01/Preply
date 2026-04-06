@@ -5,6 +5,7 @@ import heroFactory from "@/assets/hero-factory.jpg";
 import plasticSheets from "@/assets/plastic-sheets.jpg";
 import heroSofaImage from "@/assets/hero-sofa.jpg"; 
 import hawkerbg from "@/assets/hawker-bg.png";
+import chinabsofahero from "@/assets/chinabsofa-hero.png";
 
 export const products = [
   {
@@ -17,7 +18,7 @@ export const products = [
     image2: wasteCollection, // Image 2 background
     image3: heroFactory, // Image 3 background
     image4: plasticSheets,
-    heroImage: productsFurniture, // Image 1 background
+    heroImage: chinabsofahero, // Image 1 background
     whatsapp: "Chinab Sofa",
     features: ["BWP Grade", "BWR (IS-303)", "MR Grade"] // Image 3 categories
   },

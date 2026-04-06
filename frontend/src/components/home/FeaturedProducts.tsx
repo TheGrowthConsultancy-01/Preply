@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import plasticSheets from "@/assets/plastic-sheets.jpg";
 import furniture from "@/assets/products-furniture.jpg";
 import wasteCollection from "@/assets/waste-collection.jpg";
+import chinabsofahero from "@/assets/chinabsofa-hero.png";
 
 const products = [
   {
@@ -16,7 +17,7 @@ const products = [
     id: "chinab-sofa",
     name: "Chinab Sofa",
     desc: "Inspired by the engineering strength of the Chinab River Bridge — engineered waste plastic strength.",
-    image: furniture,
+    image: chinabsofahero,
     whatsapp: "Chinab Sofa",
   },
   {
