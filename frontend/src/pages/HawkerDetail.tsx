@@ -128,7 +128,7 @@ const productId = "hawker";
                 transition={{ delay: 0.4 }}
                 className="text-lg md:text-xl text-white/80 font-light"
               >
-                India’s first sustainable handcart built from plastic waste <span className="font-medium text-white">modern living.</span>
+                India’s first <span className="font-medium text-white">sustainable handcart</span> built from plastic waste.
               </motion.p>
             </motion.div>
           </div>
@@ -147,7 +147,7 @@ const productId = "hawker";
               </div>
               
               <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-slate-900 leading-[1.1]">
-                Built for Vendors. Designed for the Future <br/> with {product.name}
+                Built for Vendors. Designed for the Future.
               </h2>
 
               <p className="text-slate-600 leading-relaxed text-lg text-justify mb-10 border-l-4 border-slate-100 pl-6 italic">
@@ -228,7 +228,7 @@ const productId = "hawker";
             >
             {/* Hawker - Accent Color, No Shadow */}
             <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
-                Hawker
+                Hawker Cart
             </h2>
             
             {/* Sub-heading - Pure White, No Shadow */}
@@ -281,6 +281,8 @@ const productId = "hawker";
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7 }}
       className="text-center max-w-3xl mx-auto mb-16"
     >
       <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
@@ -288,25 +290,27 @@ const productId = "hawker";
       </h2>
     </motion.div>
 
-    {/* Grid setup for 3 items (since you requested 3 in previous step) */}
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {hawkerCases.map((c, i) => (
         <motion.div
           key={c.title}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-center p-10 rounded-[2.5rem] bg-white border border-slate-100 hover:border-[#2E7D32]/30 hover:shadow-2xl transition-all duration-300 group"
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+          className="text-center p-8 rounded-3xl bg-white border border-slate-100 hover:border-[#2E7D32]/30 hover:shadow-xl transition-all duration-300 group"
         >
-          <div className="w-16 h-16 mx-auto rounded-2xl bg-green-50 flex items-center justify-center mb-8 group-hover:bg-[#2E7D32] transition-all duration-300 group-hover:scale-110">
-            <c.icon className="h-7 w-7 text-[#2E7D32] group-hover:text-white transition-colors duration-300" />
+          <div className="w-16 h-16 mx-auto rounded-2xl bg-green-50 flex items-center justify-center mb-6 group-hover:bg-[#2E7D32] transition-colors duration-300">
+            <c.icon className="h-7 w-7 text-[#2E7D32] group-hover:text-white" />
           </div>
 
-          {/* Title - Changed to text-2xl to match the above section */}
-          <h3 className="text-2xl font-bold text-slate-900 mb-4 transition-colors duration-300">
+          {/* Title - Changed from text-2xl back to text-lg (Original Sofa size) */}
+          <h3 className="text-lg font-bold text-slate-900 mb-2">
             {c.title}
           </h3>
 
-          {/* Description - Changed to text-lg and leading-relaxed to match */}
-          <p className="text-slate-600 leading-relaxed text-lg transition-colors duration-300">
+          {/* Description - Changed from text-lg back to text-sm (Original Sofa size) */}
+          <p className="text-sm text-slate-600 leading-relaxed">
             {c.desc}
           </p>
         </motion.div>
@@ -314,7 +318,6 @@ const productId = "hawker";
     </div>
   </div>
 </section>
-
       {/* SECTION 5: CTA */}
       <section className="py-24 lg:py-32 bg-[#0F172A] text-white">
         <div className="container mx-auto px-6 lg:px-12 text-center">

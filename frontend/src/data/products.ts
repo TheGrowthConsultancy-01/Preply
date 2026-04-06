@@ -6,6 +6,10 @@ import plasticSheets from "@/assets/plastic-sheets.jpg";
 import heroSofaImage from "@/assets/hero-sofa.jpg"; 
 import hawkerbg from "@/assets/hawker-bg.png";
 import chinabsofahero from "@/assets/chinabsofa-hero.png";
+import chinab1 from "@/assets/chinab-1.png";
+import chinab2 from "@/assets/chinab-2.png";
+import chinab3 from "@/assets/chinab-3.png";
+import chinab4 from "@/assets/chinab-4.png";
 
 export const products = [
   {
@@ -14,10 +18,10 @@ export const products = [
     tagline: "BUILDS CONFIDENCE",
     desc: "Inspired by the engineering strength of the Chinab River Bridge...",
     fullDesc: "Engineered from recycled plastic waste, the Chinab Sofa redefines modern furniture with a smarter, more sustainable approach. Built to outperform traditional wood, it offers superior durability, resistance to moisture, and long-term reliability without compromising on aesthetics. This is not just furniture, it’s a forward-thinking solution for businesses that value innovation and responsibility.", // Image 2 wala text
-    image: productsFurniture,
-    image2: wasteCollection, // Image 2 background
-    image3: heroFactory, // Image 3 background
-    image4: plasticSheets,
+    image: chinab1,
+    image2: chinab2, // Image 2 background
+    image3: chinab3, // Image 3 background
+    image4: chinab4,
     heroImage: chinabsofahero, // Image 1 background
     whatsapp: "Chinab Sofa",
     features: ["BWP Grade", "BWR (IS-303)", "MR Grade"] // Image 3 categories
