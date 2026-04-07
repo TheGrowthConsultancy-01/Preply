@@ -77,29 +77,7 @@ const ProductDetail = () => {
   return (
     <div className="flex flex-col overflow-hidden bg-white w-full">
       
-      {/* SECTION 1: HERO
-      <section 
-        className="relative h-[75vh] md:h-[85vh] flex items-center bg-cover bg-center transition-all duration-1000" 
-        style={{ backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url(${product.heroImage || product.image})` }}
-      >
-        <div className="container mx-auto text-white px-6">
-          <motion.h1 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="text-5xl md:text-7xl font-bold max-w-3xl leading-tight font-display"
-          >
-            {product.name}
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2 }}
-            className="mt-6 text-xl md:text-2xl opacity-90 tracking-widest uppercase font-light"
-          >
-            {product.tagline}
-          </motion.p>
-        </div>
-      </section> */}
+      
 
       {/* SECTION 1: HERO - Bottom Left Aligned */}
 {/* SECTION 1: HERO - Compact Text & Single Line Subtext */}
@@ -110,7 +88,7 @@ const ProductDetail = () => {
     backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage || product.image})` 
   }}
 >
-  <div className="container mx-auto px-6 lg:px-12 pb-8"> {/* Container mein thoda sa bottom padding (pb-8) rakha hai taaki text ekdum edge pe na lage, aap ise bhi 0 kar sakte ho */}
+  <div className="container mx-auto px-6 lg:px-12 pb-8"> 
     <div className="max-w-5xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -133,6 +111,7 @@ const ProductDetail = () => {
     </div>
   </div>
 </section>
+      
       {/* SECTION 2: PRODUCT STORY */}
       <section className="py-24 lg:py-32 bg-[#DCEDC8]/40 border-y border-green-100"> 
         <div className="container mx-auto px-6 lg:px-12">
@@ -173,59 +152,7 @@ const ProductDetail = () => {
         </div>
       </section>
 
-      {/* SECTION 3: ABOUT */}
-      {/* <section className="py-24 md:py-32 w-full overflow-visible bg-white relative z-0">
-        <div className="max-w-[1400px] mx-auto px-6 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div className="order-2 lg:order-1 lg:col-span-5 relative z-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-[2px] bg-[#EAB308]"></div>
-                <span className="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">
-                  Sustainable Engineering
-                </span>
-              </div>
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-slate-900 leading-[1.1]">
-                Redefining the <br/> Future with {product.name}
-              </h2>
-              <p className="text-slate-600 leading-relaxed text-lg text-justify mb-10 border-l-4 border-slate-100 pl-6 italic">
-                {product.fullDesc}
-              </p>
-              <Button className="bg-[#0F172A] hover:bg-[#1e293b] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-2">
-                Read More <ArrowRight size={18} />
-              </Button>
-            </div>
-
-            <div className="order-1 lg:order-2 lg:col-span-7 relative h-[450px] md:h-[550px] lg:h-[600px] w-full max-w-[700px] mx-auto lg:mx-0">
-              <div className="absolute top-0 left-0 w-[90%] h-[80%] overflow-hidden rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-0 border border-slate-50">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={`bg-${currentIndex}`}
-                    src={sliderImages[currentIndex]}
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
-                    className="w-full h-full object-cover" 
-                  />
-                </AnimatePresence>
-              </div>
-              <div className="absolute bottom-[-10px] right-0 translate-x-[20%] md:translate-x-[30%] w-[55%] h-[50%] overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] border-[12px] border-white z-10 hidden md:block">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={`fg-${currentIndex}`}
-                    src={sliderImages[(currentIndex + 1) % sliderImages.length]}
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 40 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="w-full h-full object-cover"
-                  />
-                </AnimatePresence>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+      
       {/* SECTION 3: ABOUT - Full Description & WhatsApp Inquiry */}
 <section className="py-24 md:py-32 w-full overflow-visible bg-white relative z-0">
   <div className="max-w-[1400px] mx-auto px-6 relative">
@@ -307,6 +234,7 @@ const ProductDetail = () => {
       alt="Recycled Texture Background"
     />
     <div className="absolute inset-0 bg-black/35"></div> 
+    
   </div>
 
   <div className="absolute inset-0 z-5 bg-[radial-gradient(circle_at_50%_40%,rgba(10,26,18,0.9)_0%,rgba(10,26,18,0)_70%)]"></div>

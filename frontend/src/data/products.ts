@@ -10,6 +10,11 @@ import chinab1 from "@/assets/chinab-1.png";
 import chinab2 from "@/assets/chinab-2.png";
 import chinab3 from "@/assets/chinab-3.png";
 import chinab4 from "@/assets/chinab-4.png";
+import chinab5 from "@/assets/chinab-5.png";
+import chinab6 from "@/assets/chinab-6.png";
+import hawker1 from "@/assets/hawker-1.png";
+import hawker2 from "@/assets/hawker-2.png";  
+
 
 export const products = [
   {
@@ -18,11 +23,11 @@ export const products = [
     tagline: "BUILDS CONFIDENCE",
     desc: "Inspired by the engineering strength of the Chinab River Bridge...",
     fullDesc: "Engineered from recycled plastic waste, the Chinab Sofa redefines modern furniture with a smarter, more sustainable approach. Built to outperform traditional wood, it offers superior durability, resistance to moisture, and long-term reliability without compromising on aesthetics. This is not just furniture, it’s a forward-thinking solution for businesses that value innovation and responsibility.", // Image 2 wala text
-    image: chinab1,
+    image: chinab6,
     image2: chinab2, // Image 2 background
     image3: chinab3, // Image 3 background
-    image4: chinab4,
-    heroImage: chinabsofahero, // Image 1 background
+    image4: chinab5,
+    heroImage: chinab1, // Image 1 background
     whatsapp: "Chinab Sofa",
     features: ["BWP Grade", "BWR (IS-303)", "MR Grade"] // Image 3 categories
   },
@@ -33,10 +38,10 @@ export const products = [
     tagline: "STRENGTH IN EVERY MOVE",
     desc: "Heavy-duty sustainable furniture built for mobility and extreme conditions.",
     fullDesc: "Preply’s Sustainable Handcart is not just a product it’s a new standard for street vending. Crafted using advanced plastic plysheets made from recycled waste, this handcart replaces traditional wood with a smarter, more durable, and future-ready alternative.",
-    image: "/path-to-hawker-image.jpg", 
-    image2: "/path-to-hawker-process.jpg", 
-    image3: "/path-to-hawker-texture.jpg",
-    image4: "/path-to-hawker-final.jpg",
+    image: hawker1, 
+    image2: hawker2, 
+    image3: hawker1,
+    image4: hawker2,
     heroImage: hawkerbg,
     whatsapp: "Hawker Product"
   },
