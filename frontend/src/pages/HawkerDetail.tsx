@@ -285,7 +285,7 @@ const productId = "hawker";
       transition={{ duration: 0.7 }}
       className="text-center max-w-3xl mx-auto mb-16"
     >
-      <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+      <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
         Closing the Loop on Plastic Waste
       </h2>
     </motion.div>
@@ -326,7 +326,7 @@ const productId = "hawker";
             whileInView={{ opacity: 1, y: 0 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-display">
+            <h2 className="text-3xl md:text-5xl  font-display font-bold text-forground mb-6">
               Upgrade to a Smarter Handcart
             </h2>
             <p className="text-lg opacity-80 mb-10 max-w-xl mx-auto leading-relaxed">

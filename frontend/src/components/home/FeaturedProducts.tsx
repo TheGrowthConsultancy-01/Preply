@@ -8,6 +8,7 @@ import chinabsofahero from "@/assets/chinabsofa-hero.png";
 
 const products = [
   {
+    id: "bin",
     name: "Wrapper Bin",
     desc: "Made from chocolate wrapper waste collected via NGOs from schools and communities.",
     image: wasteCollection,

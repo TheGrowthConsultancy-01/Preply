@@ -123,7 +123,7 @@ const ProductDetail = () => {
             className="text-center max-w-3xl mx-auto mb-20"
           >
             {/* <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#2E7D32] mb-4">The Journey</p> */}
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4x">
               From Discarded Plastic to Designer Furniture
             </h2>
           </motion.div>
@@ -362,7 +362,7 @@ const ProductDetail = () => {
       className="text-center mb-16"
     >
       {/* whitespace-nowrap text ko ek line mein rakhega */}
-      <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-slate-900 whitespace-nowrap">
+      <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
         Reinventing Furniture Beyond Wood
       </h2>
     </motion.div>
@@ -411,7 +411,7 @@ const ProductDetail = () => {
             className="text-center max-w-3xl mx-auto mb-16"
           >
             {/* <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#2E7D32] mb-4">Applications</p> */}
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
               One Chinab Sofa. Infinite Possibilities.
             </h2>
           </motion.div>
@@ -447,7 +447,7 @@ const ProductDetail = () => {
             transition={{ duration: 0.7 }}
             className="max-w-3xl mx-auto"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-display">
+            <h2 className="text-3xl md:text-5xl  font-display font-bold text-forground mb-6">
               Build Sustainable Spaces Today
             </h2>
             <p className="text-lg opacity-80 mb-10 max-w-xl mx-auto leading-relaxed">

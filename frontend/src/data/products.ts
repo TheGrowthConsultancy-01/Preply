@@ -45,5 +45,20 @@ export const products = [
     heroImage: hawkerbg,
     whatsapp: "Hawker Product"
   },
+
+  {
+    id: "bin", // Niche wala wrapper "bin" name hi use karega
+    name: "Wrapper Bin",
+    tagline: "SMART WASTE MANAGEMENT",
+    desc: "Heavy-duty recycled plastic bins built for durability and sustainability.",
+    fullDesc: "Preply’s Wrapper Bin is engineered using recycled chocolate wrapper waste collected through NGOs working with schools and communities. It transforms low-value plastic into a high-impact product that promotes waste segregation, awareness, and circular use.",
+    image: "bin1", 
+    image2: "bin2", 
+    image3: "bin1",
+    image4: "bin2",
+    heroImage: "binHero",
+    whatsapp: "Bin Enquiry",
+    features: ["Weather Proof", "Zero Maintenance", "Eco-Friendly"]
+  },
   // baki products...
 ];
