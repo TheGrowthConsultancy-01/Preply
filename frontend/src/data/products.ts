@@ -14,7 +14,7 @@ import chinab5 from "@/assets/chinab-5.png";
 import chinab6 from "@/assets/chinab-6.png";
 import hawker1 from "@/assets/hawker-1.png";
 import hawker2 from "@/assets/hawker-2.png";  
-import chinabsofa from "@/assets/CHINAB SOFA IMAGE 3.png"
+import chinabsofa from "@/assets/hero1.png"
 
 
 export const products = [
