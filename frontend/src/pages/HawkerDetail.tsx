@@ -81,8 +81,8 @@ const productId = "hawker";
   const sliderImages = [
     product?.image || "",
     product?.image4 || "",
-    product?.image2 || product?.image || "",
-    product?.image3 || product?.image4 || "",
+    product?.image2 || "",
+    product?.image3 ||  "",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -90,7 +90,7 @@ const productId = "hawker";
   // Auto-slide effect jo tumne manga tha
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
+      setCurrentIndex((prev) => (prev + 2) % 4);
     }, 3500);
     return () => clearInterval(timer);
   }, [sliderImages.length]);
@@ -108,7 +108,7 @@ const productId = "hawker";
     backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage || product.image})` 
   }}
 >
-  <div className="container mx-auto px-6 lg:px-12 pb-8"> 
+  <div className="container mx-auto px-6 lg:px-12 pb-20"> 
     <div className="max-w-5xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -191,7 +191,7 @@ const productId = "hawker";
           <AnimatePresence mode="wait">
             <motion.img
               key={`fg-${currentIndex}`}
-              src={sliderImages[(currentIndex + 1) % sliderImages.length]}
+              src={sliderImages[currentIndex + 1]}
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 40 }}
@@ -334,21 +334,20 @@ const productId = "hawker";
               For municipalities, NGOs, and bulk buyers ready to make the sustainable switch.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button 
+               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/20 bg-white/5 text-white hover:bg-white/10 px-8 py-7 text-base font-semibold rounded-full gap-2 backdrop-blur-sm"
-                asChild
+                className="border-white/20 bg-white/5 text-white hover:bg-white/10 px-8 py-7 text-base font-semibold rounded-full gap-2 backdrop-blur-sm transition-all"
               >
-                <a href="tel:+919999999999"><Phone className="h-4 w-4" /> Call Specialist</a>
+                <Phone className="h-4 w-4" /> Contact Us
               </Button>
               
-              <Button 
+               <Button 
                 size="lg" 
                 variant="outline" 
-                className="border-white/20 bg-white/5 text-white hover:bg-white/10 px-8 py-7 text-base font-semibold rounded-full gap-2 backdrop-blur-sm"
+                className="border-white/20 bg-white/5 text-white hover:bg-white/10 px-8 py-7 text-base font-semibold rounded-full gap-2 backdrop-blur-sm transition-all"
               >
-                <FileText className="h-4 w-4" /> Download Catalog
+                <FileText className="h-4 w-4" /> Download Brochure
               </Button>
             </div>
           </motion.div>

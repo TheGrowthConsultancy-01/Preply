@@ -27,7 +27,7 @@ export const products = [
     image: chinab6,
     image2: chinab2, // Image 2 background
     image3: chinab3, // Image 3 background
-    image4: chinab5,
+    image4: chinab5 ,
     heroImage: chinabsofa, // Image 1 background
     whatsapp: "Chinab Sofa",
     features: ["BWP Grade", "BWR (IS-303)", "MR Grade"] // Image 3 categories

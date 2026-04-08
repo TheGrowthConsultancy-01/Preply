@@ -52,8 +52,8 @@ const ProductDetail = () => {
   const sliderImages = [
     product?.image || "",
     product?.image4 || "",
-    product?.image2 || product?.image || "",
-    product?.image3 || product?.image4 || "",
+    product?.image2 || "",
+    product?.image3 || "",
   ];
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -61,7 +61,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % sliderImages.length);
+      setCurrentIndex((prev) => (prev + 2) % 4);
     }, 3500);
     return () => clearInterval(timer);
   }, [sliderImages.length]);
@@ -88,7 +88,7 @@ const ProductDetail = () => {
     backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage || product.image})` 
   }}
 >
-  <div className="container mx-auto px-6 lg:px-12 pb-8"> 
+  <div className="container mx-auto px-6 lg:px-12 pb-20"> 
     <div className="max-w-5xl">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -259,7 +259,7 @@ const ProductDetail = () => {
           <AnimatePresence mode="wait">
             <motion.img
               key={`fg-${currentIndex}`}
-              src={sliderImages[(currentIndex + 1) % sliderImages.length]}
+              src={sliderImages[currentIndex + 1]}
               initial={{ opacity: 0, x: 40 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 40 }}
