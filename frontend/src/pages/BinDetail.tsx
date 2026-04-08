@@ -115,24 +115,36 @@ const BinDetail = () => {
       
       {/* SECTION 1: HERO */}
       <section 
-        className="relative h-[70vh] md:h-[80vh] flex items-end pb-0 bg-cover bg-center transition-all duration-1000" 
-        style={{ 
-          backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage})` 
-        }}
+  className="relative h-[70vh] md:h-[96vh] flex items-end pb-0 bg-cover bg-center transition-all duration-1000" 
+  style={{ 
+    backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage || product.image})` 
+  }}
+>
+  <div className="container mx-auto px-6 lg:px-12 pb-8"> 
+    <div className="max-w-5xl">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <div className="container mx-auto px-6 lg:px-12 pb-8"> 
-          <div className="max-w-5xl">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight font-display mb-4">
-                More than a   <span className="text-[#A3E635]">Wrapper Bin</span>
-              </h1>
-              <p className="text-lg md:text-xl text-white/80 font-light">
-               Driving behavioural change toward <span className="font-medium text-white">sustainability.</span>
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+        {/* Heading matching other product pages */}
+        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight font-display mb-4">
+          More than a <span className="text-[#A3E635]">Wrapper Bin</span>
+        </h1>
+        
+        {/* Subtext with whitespace fix for mobile consistency */}
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="text-lg md:text-xl text-white/80 font-light whitespace-nowrap md:whitespace-normal"
+        >
+          Driving behavioural change toward <span className="font-medium text-white">sustainability.</span>
+        </motion.p>
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* SECTION 2: PRODUCT STORY - Concept Style Linear Flow */}
 {/* SECTION 2: PRODUCT STORY - Updated with Chinab Sofa Background Style */}
@@ -200,11 +212,11 @@ const BinDetail = () => {
         </div>
         
         <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-slate-900 leading-[1.1]">
-          {/* Redefining the <br/> Future with {product.name} */}
-          From Wrapper Waste to Purpose
+          From Wrapper Waste <br/> to Purpose
         </h2>
 
-        <p className="text-slate-600 leading-relaxed text-lg text-justify mb-10 border-l-4 border-slate-100 pl-6 italic">
+        {/* Updated Description: No italic, clean sans font, green-tinted border */}
+        <p className="text-slate-600 leading-relaxed text-lg mb-10 border-l-4 border-[#A3E635]/30 pl-6 font-sans">
           {product.fullDesc}
         </p>
 
@@ -215,7 +227,7 @@ const BinDetail = () => {
           asChild
         >
           <a
-            href="https://wa.me/919999999999?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20Bin%20products."
+            href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.name}. Please share details.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2"
@@ -228,7 +240,7 @@ const BinDetail = () => {
       {/* RIGHT SIDE: OVERLAPPING IMAGE SLIDER */}
       <div className="order-1 lg:order-2 lg:col-span-7 relative h-[450px] md:h-[550px] lg:h-[600px] w-full max-w-[700px] mx-auto lg:mx-0">
         
-        {/* Main Background Image (90% Width) */}
+        {/* Main Background Image */}
         <div className="absolute top-0 left-0 w-[90%] h-[80%] overflow-hidden rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-0 border border-slate-50">
           <AnimatePresence mode="wait">
             <motion.img
@@ -243,8 +255,8 @@ const BinDetail = () => {
           </AnimatePresence>
         </div>
 
-        {/* Overlapping Front Image (Small & Bottom Right) */}
-        <div className="absolute bottom-[-10px] right-0 translate-x-[20%] md:translate-x-[30%] w-[55%] h-[50%] overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] border-[12px] border-white z-10 hidden md:block">
+        {/* Small Image: Border reduced to 6px, overflow-hidden to fix gaps */}
+        <div className="absolute bottom-[-10px] right-0 translate-x-[20%] md:translate-x-[30%] w-[55%] h-[50%] overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] border-[6px] border-white z-10 hidden md:block">
           <AnimatePresence mode="wait">
             <motion.img
               key={`fg-${currentIndex}`}

@@ -14,6 +14,7 @@ import chinab5 from "@/assets/chinab-5.png";
 import chinab6 from "@/assets/chinab-6.png";
 import hawker1 from "@/assets/hawker-1.png";
 import hawker2 from "@/assets/hawker-2.png";  
+import chinabsofa from "@/assets/CHINAB SOFA IMAGE 3.png"
 
 
 export const products = [
@@ -27,7 +28,7 @@ export const products = [
     image2: chinab2, // Image 2 background
     image3: chinab3, // Image 3 background
     image4: chinab5,
-    heroImage: chinab1, // Image 1 background
+    heroImage: chinabsofa, // Image 1 background
     whatsapp: "Chinab Sofa",
     features: ["BWP Grade", "BWR (IS-303)", "MR Grade"] // Image 3 categories
   },

@@ -83,7 +83,7 @@ const ProductDetail = () => {
 {/* SECTION 1: HERO - Compact Text & Single Line Subtext */}
 {/* SECTION 1: HERO - Gap Removed from Bottom */}
 <section 
-  className="relative h-[70vh] md:h-[80vh] flex items-end pb-0 bg-cover bg-center transition-all duration-1000" 
+  className="relative h-[70vh] md:h-[96vh] flex items-end pb-0 bg-cover bg-center transition-all duration-1000" 
   style={{ 
     backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage || product.image})` 
   }}
@@ -113,7 +113,7 @@ const ProductDetail = () => {
 </section>
       
       {/* SECTION 2: PRODUCT STORY */}
-      <section className="py-24 lg:py-32 bg-[#DCEDC8]/40 border-y border-green-100"> 
+      {/* <section className="py-24 lg:py-32 bg-[#DCEDC8]/40 border-y border-green-100"> 
         <div className="container mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -122,7 +122,7 @@ const ProductDetail = () => {
             transition={{ duration: 0.7 }}
             className="text-center max-w-3xl mx-auto mb-20"
           >
-            {/* <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#2E7D32] mb-4">The Journey</p> */}
+            
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4x">
               From Discarded Plastic to Designer Furniture
             </h2>
@@ -150,7 +150,55 @@ const ProductDetail = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+      <section className="py-24 lg:py-32 bg-[#DCEDC8]/40 border-y border-green-100"> 
+  <div className="container mx-auto px-6 lg:px-12">
+    <div className="text-center max-w-2xl mx-auto mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.7 }}
+      >
+        <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4">
+          From Discarded Plastic to Designer Furniture
+        </h2>
+      </motion.div>
+    </div>
+
+    <div className="relative">
+      {/* Connection line - 4 steps ke liye width aur position adjust ki hai */}
+      <div className="hidden lg:block absolute top-10 left-[12%] right-[12%] h-[2px] bg-gradient-to-r from-[#2E7D32]/20 via-[#2E7D32]/40 to-transparent z-0" />
+
+      {/* Grid changed to lg:grid-cols-4 for 4 steps */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+        {steps.map((step, i) => (
+          <motion.div
+            key={step.label}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            className="relative flex flex-col items-center text-center group"
+          >
+            {/* Icon Container */}
+            <div className="w-20 h-20 rounded-[2rem] bg-white flex items-center justify-center mb-6 group-hover:bg-[#388E3C] group-hover:text-white transition-all duration-500 shadow-[0_10px_30px_rgba(46,125,50,0.1)] border border-green-200">
+              <step.icon className="h-8 w-8 text-[#2E7D32] group-hover:text-white transition-colors duration-300" />
+            </div>
+
+            {/* Step Label */}
+            <span className="text-xs font-bold uppercase tracking-widest text-[#2E7D32] mb-2">
+              Step {i + 1}
+            </span>
+            
+            <h3 className="text-lg font-bold text-slate-800 mb-2">{step.label}</h3>
+            <p className="text-sm text-slate-600 leading-relaxed px-4">{step.desc}</p>
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
 
       
       {/* SECTION 3: ABOUT - Full Description & WhatsApp Inquiry */}
@@ -169,30 +217,30 @@ const ProductDetail = () => {
           Redefining the <br/> Future with {product.name}
         </h2>
 
-        {/* Full Text - No Toggle */}
-        <p className="text-slate-600 leading-relaxed text-lg text-justify mb-10 border-l-4 border-slate-100 pl-6 italic">
+        {/* Updated Description: Removed 'italic' and 'text-justify' */}
+        <p className="text-slate-600 leading-relaxed text-lg mb-10 border-l-4 border-[#A3E635]/30 pl-6 font-sans">
           {product.fullDesc}
         </p>
 
         {/* WhatsApp Inquiry Button */}
-     <Button 
-  variant="default" 
-  size="lg" 
-  className="bg-[#166534] hover:bg-[#14532D] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105"
-  asChild
->
-  <a
-    href="https://wa.me/919999999999?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20products.%20Please%20share%20details."
-    target="_blank"
-    rel="noopener noreferrer"
-    className="flex items-center gap-2"
-  >
-    WhatsApp Enquiry
-  </a>
-</Button>
+        <Button 
+          variant="default" 
+          size="lg" 
+          className="bg-[#166534] hover:bg-[#14532D] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105"
+          asChild
+        >
+          <a
+            href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.name}. Please share details.`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2"
+          >
+            WhatsApp Enquiry
+          </a>
+        </Button>
       </div>
 
-      {/* Right Side Images - Unchanged */}
+      {/* Right Side Images - Same as before */}
       <div className="order-1 lg:order-2 lg:col-span-7 relative h-[450px] md:h-[550px] lg:h-[600px] w-full max-w-[700px] mx-auto lg:mx-0">
         <div className="absolute top-0 left-0 w-[90%] h-[80%] overflow-hidden rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-0 border border-slate-50">
           <AnimatePresence mode="wait">
@@ -207,7 +255,7 @@ const ProductDetail = () => {
             />
           </AnimatePresence>
         </div>
-        <div className="absolute bottom-[-10px] right-0 translate-x-[20%] md:translate-x-[30%] w-[55%] h-[50%] overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] border-[12px] border-white z-10 hidden md:block">
+        <div className="absolute bottom-[-10px] right-0 translate-x-[20%] md:translate-x-[30%] w-[55%] h-[50%] overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] border-[6px] border-white z-10 hidden md:block">
           <AnimatePresence mode="wait">
             <motion.img
               key={`fg-${currentIndex}`}

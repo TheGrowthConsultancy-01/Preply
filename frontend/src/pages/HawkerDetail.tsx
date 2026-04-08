@@ -103,106 +103,107 @@ const productId = "hawker";
       
       {/* SECTION 1: HERO - Exactly like ProductDetail styling */}
       <section 
-        className="relative h-[70vh] md:h-[80vh] flex items-end pb-0 bg-cover bg-center transition-all duration-1000" 
-        style={{ 
-          // Background Image Slider logic handle karne ke liye currentIndex use kar sakte ho ya direct heroImage
-          backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage || product.image})` 
-        }}
+  className="relative h-[70vh] md:h-[96vh] flex items-end pb-0 bg-cover bg-center transition-all duration-1000" 
+  style={{ 
+    backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%), url(${product.heroImage || product.image})` 
+  }}
+>
+  <div className="container mx-auto px-6 lg:px-12 pb-8"> 
+    <div className="max-w-5xl">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
       >
-        <div className="container mx-auto px-6 lg:px-12 pb-8"> 
-          <div className="max-w-5xl">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              {/* Heading structure matching Sofa page */}
-              <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight font-display mb-4">
-                Introducing <span className="text-[#A3E635]">Hawker</span>
-              </h1>
-              
-              {/* Subtext structure */}
-              <motion.p 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="text-lg md:text-xl text-white/80 font-light"
-              >
-                India’s first <span className="font-medium text-white">sustainable handcart</span> built from plastic waste.
-              </motion.p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+        {/* Heading matching Sofa page structure */}
+        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight font-display mb-4">
+          Introducing <span className="text-[#A3E635]">Hawker Cart</span>
+        </h1>
+        
+        {/* Subtext with whitespace-nowrap fix for mobile */}
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          className="text-lg md:text-xl text-white/80 font-light whitespace-nowrap md:whitespace-normal"
+        >
+          India’s first <span className="font-medium text-white">sustainable handcart</span> built from plastic waste.
+        </motion.p>
+      </motion.div>
+    </div>
+  </div>
+</section>
       {/* SECTION 2: ABOUT - Description & Slider */}
       <section className="py-24 md:py-32 w-full overflow-visible bg-white relative z-0">
-        <div className="max-w-[1400px] mx-auto px-6 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div className="order-2 lg:order-1 lg:col-span-5 relative z-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-[2px] bg-[#A3E635]"></div>
-                <span className="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">
-                  Industrial Resilience
-                </span>
-              </div>
-              
-              <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-slate-900 leading-[1.1]">
-                Built for Vendors. Designed for the Future.
-              </h2>
-
-              <p className="text-slate-600 leading-relaxed text-lg text-justify mb-10 border-l-4 border-slate-100 pl-6 italic">
-                {product.fullDesc}
-              </p>
-
-              <Button 
-                variant="default" 
-                size="lg" 
-                className="bg-[#166534] hover:bg-[#14532D] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105"
-                asChild
-              >
-                <a
-                  href={`https://wa.me/919999999999?text=Inquiry%20for%20${product.name}%20Handcarts`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2"
-                >
-                  WhatsApp Enquiry
-                </a>
-              </Button>
-            </div>
-
-            <div className="order-1 lg:order-2 lg:col-span-7 relative h-[450px] md:h-[550px] lg:h-[600px] w-full max-w-[700px] mx-auto lg:mx-0">
-              <div className="absolute top-0 left-0 w-[90%] h-[80%] overflow-hidden rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-0 border border-slate-50">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={`bg-${currentIndex}`}
-                    src={sliderImages[currentIndex]}
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1 }}
-                    className="w-full h-full object-cover" 
-                  />
-                </AnimatePresence>
-              </div>
-              <div className="absolute bottom-[-10px] right-0 translate-x-[20%] md:translate-x-[30%] w-[55%] h-[50%] overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] border-[12px] border-white z-10 hidden md:block">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={`fg-${currentIndex}`}
-                    src={sliderImages[(currentIndex + 1) % sliderImages.length]}
-                    initial={{ opacity: 0, x: 40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: 40 }}
-                    transition={{ duration: 0.6, delay: 0.2 }}
-                    className="w-full h-full object-cover"
-                  />
-                </AnimatePresence>
-              </div>
-            </div>
-          </div>
+  <div className="max-w-[1400px] mx-auto px-6 relative">
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="order-2 lg:order-1 lg:col-span-5 relative z-10">
+        <div className="flex items-center gap-3 mb-6">
+          <div className="w-10 h-[2px] bg-[#A3E635]"></div>
+          <span className="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">
+            Industrial Resilience
+          </span>
         </div>
-      </section>
+        
+        <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 text-slate-900 leading-[1.1]">
+          Built for Vendors. <br/> Designed for the Future.
+        </h2>
 
+        {/* Updated Description: Clean font, no italic, consistent border */}
+        <p className="text-slate-600 leading-relaxed text-lg mb-10 border-l-4 border-[#A3E635]/30 pl-6 font-sans">
+          {product.fullDesc}
+        </p>
+
+        <Button 
+          variant="default" 
+          size="lg" 
+          className="bg-[#166534] hover:bg-[#14532D] text-white font-bold px-10 py-7 rounded-full shadow-2xl transition-all hover:scale-105"
+          asChild
+        >
+          <a
+            href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.name}. Please share details.`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2"
+          >
+            WhatsApp Enquiry
+          </a>
+        </Button>
+      </div>
+
+      <div className="order-1 lg:order-2 lg:col-span-7 relative h-[450px] md:h-[550px] lg:h-[600px] w-full max-w-[700px] mx-auto lg:mx-0">
+        <div className="absolute top-0 left-0 w-[90%] h-[80%] overflow-hidden rounded-[3rem] shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-0 border border-slate-50">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={`bg-${currentIndex}`}
+              src={sliderImages[currentIndex]}
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 1 }}
+              className="w-full h-full object-cover" 
+            />
+          </AnimatePresence>
+        </div>
+        
+        {/* Small Image: Reduced border to 6px and overflow-hidden to remove gaps */}
+        <div className="absolute bottom-[-10px] right-0 translate-x-[20%] md:translate-x-[30%] w-[55%] h-[50%] overflow-hidden rounded-[2.5rem] shadow-[0_30px_60px_rgba(0,0,0,0.2)] border-[6px] border-white z-10 hidden md:block">
+          <AnimatePresence mode="wait">
+            <motion.img
+              key={`fg-${currentIndex}`}
+              src={sliderImages[(currentIndex + 1) % sliderImages.length]}
+              initial={{ opacity: 0, x: 40 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 40 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="w-full h-full object-cover"
+            />
+          </AnimatePresence>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
       {/* SECTION 3: FEATURES - Background Image Logic */}
       <section className="relative py-24 lg:py-32 overflow-hidden bg-slate-950">
         {/* 1. Background Image - Normal state mein clear dikhegi */}

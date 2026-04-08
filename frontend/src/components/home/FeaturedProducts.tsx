@@ -77,39 +77,49 @@ const FeaturedProducts = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {products.map((product) => (
-            <div
-              key={product.name}
-              className="group bg-card rounded-xl overflow-hidden shadow-premium hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
-            >
-              {/* <Link to={`/product/${product.id}`} className="block relative h-56 overflow-hidden cursor-pointer"> */}
-              <Link 
-  to={`/product/${product.id}`} onClick={()=> console.log("Clicked")}
-  className="relative z-[999] block h-56 overflow-hidden cursor-pointer" // z-999 add kiya
->
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent pointer-events-none" />
-              </Link>
-              <div className="p-6">
-                <h3 className="font-display font-semibold text-lg text-foreground mb-2">{product.name}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed mb-5">{product.desc}</p>
-                <a
-                  href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.whatsapp}. Please share details.`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
-                >
-                  <MessageCircle size={14} />
-                  Enquire on WhatsApp
-                </a>
-              </div>
-            </div>
-          ))}
+  {products.map((product) => (
+    <div key={product.name} className="relative group">
+      {/* 1. Pure Card ko Link banaya hai */}
+      <Link 
+        to={product.id ? `/product/${product.id}` : "#"} 
+        className="block bg-card rounded-xl overflow-hidden shadow-premium hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 h-full"
+      >
+        {/* Image Section */}
+        <div className="relative h-56 overflow-hidden">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
         </div>
+
+        {/* Content Section */}
+        <div className="p-6">
+          {/* 2. Heading automatically clickable hai kyunki ye Link ke andar hai */}
+          <h3 className="font-display font-semibold text-lg text-foreground mb-2 group-hover:text-primary transition-colors">
+            {product.name}
+          </h3>
+          <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+            {product.desc}
+          </p>
+          
+          {/* 3. WhatsApp Button - Isme stopPropagation lagaya hai taaki Link trigger na ho */}
+          <a
+            href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.whatsapp}. Please share details.`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()} // Yeh line zaroori hai
+            className="relative z-20 inline-flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary/90 transition-colors"
+          >
+            <MessageCircle size={14} />
+            Enquire on WhatsApp
+          </a>
+        </div>
+      </Link>
+    </div>
+  ))}
+</div>
       </div>
     </section>
   );

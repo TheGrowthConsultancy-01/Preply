@@ -29,20 +29,22 @@ const App = () => (
       <BrowserRouter>
         <ScrollToTop />
         <Header />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/plastic-sheets" element={<PlasticSheets />} />
-          <Route path="/impact" element={<Impact />} />
-          <Route path="/contact" element={<Contact />} />
-            <Route path="/product/:productId" element={<ProductDetail />} /> {/* Dynamic Route */}
+        {/* Main tag add kiya padding-top ke saath */}
+        <main className="pt-16 md:pt-10"> 
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/plastic-sheets" element={<PlasticSheets />} />
+            <Route path="/impact" element={<Impact />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path="/product/hawker" element={<HawkerDetail />} />
             <Route path="/product/bin" element={<BinDetail />} />
-          <Route path="*" element={<NotFound />} />
-        
-        </Routes>
-        <Footer />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+                <Footer />
         <WhatsAppSticky />
       </BrowserRouter>
     </TooltipProvider>
