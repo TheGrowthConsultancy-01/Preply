@@ -18,6 +18,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ProductDetail from "./pages/ProductDetail";
 import HawkerDetail from "./pages/HawkerDetail";
 import BinDetail from "./pages/BinDetail";
+import CoffeeDetail from "./pages/CoffeeDetail";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +42,7 @@ const App = () => (
             <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path="/product/hawker" element={<HawkerDetail />} />
             <Route path="/product/bin" element={<BinDetail />} />
+            <Route path="/product/coffee-table" element={<CoffeeDetail />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

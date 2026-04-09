@@ -5,6 +5,7 @@ import plasticSheets from "@/assets/plastic-sheets.jpg";
 import furniture from "@/assets/products-furniture.jpg";
 import wasteCollection from "@/assets/waste-collection.jpg";
 import chinabsofahero from "@/assets/chinabsofa-hero.png";
+import coffeehome from "@/assets/coffee-home.png";
 
 const products = [
   {
@@ -28,9 +29,10 @@ const products = [
     whatsapp: "Awards & Mementos",
   },
   {
+    id:"coffee-table",
     name: "Coffee Table",
     desc: "Minimal furniture crafted from recycled plastic sheets. Modern design meets responsibility.",
-    image: furniture,
+    image: coffeehome,
     whatsapp: "Coffee Table",
   },
   {

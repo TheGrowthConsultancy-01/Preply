@@ -14,7 +14,10 @@ import chinab5 from "@/assets/chinab-5.png";
 import chinab6 from "@/assets/chinab-6.png";
 import hawker1 from "@/assets/hawker-1.png";
 import hawker2 from "@/assets/hawker-2.png";  
-import chinabsofa from "@/assets/hero1.png"
+import chinabsofa from "@/assets/hero1.png";
+import coffeehero from "@/assets/coffee-hero.png";
+import coffee2 from "@/assets/coffee-2.png";
+import coffee3 from "@/assets/coffee-3.png";
 
 
 export const products = [
@@ -60,6 +63,21 @@ export const products = [
     heroImage: "binHero",
     whatsapp: "Bin Enquiry",
     features: ["Weather Proof", "Zero Maintenance", "Eco-Friendly"]
+  },
+
+  {
+    id: "coffee-table",
+    name: "Coffee Table",
+    tagline: "MINIMALIST & SUSTAINABLE",
+    desc: "Minimal furniture crafted from recycled plastic sheets. Modern design meets environmental responsibility — a centerpiece with purpose.",
+    fullDesc: "Every Preply’s coffee table begins its journey as discarded plastic — transformed through innovation into a material that rivals the warmth of wood, the durability of stone, and the conscience of a better tomorrow. Conscious living isn't about compromise — it's about choosing pieces that reflect your values without sacrificing your taste. The Preply’s coffee table is a quiet statement: that beautiful design and environmental responsibility can share the same room.",
+    image: "furniture", // Main image (Pair 1 - Big)
+    image2: coffee2, // Detail image (Pair 1 - Small)
+    image3: coffee3, // Lifestyle background (Pair 2 - Big)
+    image4: "coffeeTableTop", // Top view (Pair 2 - Small)
+    heroImage: coffeehero, // Hero section background
+    whatsapp: "Coffee Table",
+    features: ["Waterproof", "Scratch Resistant", "100% Recycled"] 
   },
   // baki products...
 ];
