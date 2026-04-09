@@ -6,6 +6,7 @@ import furniture from "@/assets/products-furniture.jpg";
 import wasteCollection from "@/assets/waste-collection.jpg";
 import chinabsofahero from "@/assets/chinabsofa-hero.png";
 import coffeehome from "@/assets/coffee-home.png";
+import hawkerhome from "@/assets/hawker-home.png";
 
 const products = [
   {
@@ -39,7 +40,7 @@ const products = [
     id:"hawker",
     name: "Sustainable Handcarts",
     desc: "Empowering small-scale industries with durable, maintenance-free sustainable carts.",
-    image: plasticSheets,
+    image: hawkerhome,
     whatsapp: "Sustainable Handcarts",
   },
   // {

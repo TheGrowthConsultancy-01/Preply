@@ -13,7 +13,8 @@ import chinab4 from "@/assets/chinab-4.png";
 import chinab5 from "@/assets/chinab-5.png";
 import chinab6 from "@/assets/chinab-6.png";
 import hawker1 from "@/assets/hawker-1.png";
-import hawker2 from "@/assets/hawker-2.png";  
+import hawker2 from "@/assets/hawker-2.png";
+import hawkerhero from "@/assets/hawker-hero.png";  
 import chinabsofa from "@/assets/hero1.png";
 import coffeehero from "@/assets/coffee-hero.png";
 import coffee2 from "@/assets/coffee-2.png";
@@ -48,7 +49,7 @@ export const products = [
     image2: hawker2, 
     image3: hawker1,
     image4: hawker2,
-    heroImage: hawkerbg,
+    heroImage: hawkerhero,
     whatsapp: "Hawker Product"
   },
 

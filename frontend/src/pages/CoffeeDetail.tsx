@@ -68,7 +68,7 @@ const rows = [
 const cases = [
   
   { icon: Building2, title: "Offices & Lounges", desc: "Durable, professional seating for high workspaces & offices." },
-  { icon: Coffee, title: "Cafes & Living Rooms", desc: "Statement furniture that handles commercial wear effortlessly." },
+  { icon: Coffee, title: "Cafes & Living Rooms", desc: "Statement furniture that handles sophistication effortlessly." },
   
 ];
 
@@ -200,7 +200,7 @@ const CoffeeDetail = () => {
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-[2px] bg-[#A3E635]"></div>
           <span className="text-slate-500 font-bold uppercase tracking-[0.2em] text-xs">
-            Sustainable Engineering
+            Sustainable Living
           </span>
         </div>
         
