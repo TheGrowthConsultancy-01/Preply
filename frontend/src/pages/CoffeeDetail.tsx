@@ -67,7 +67,7 @@ const rows = [
 
 const cases = [
   
-  { icon: Building2, title: "Offices & Lounges", desc: "Durable, professional seating for high-traffic workspaces." },
+  { icon: Building2, title: "Offices & Lounges", desc: "Durable, professional seating for high workspaces & offices." },
   { icon: Coffee, title: "Cafes & Living Rooms", desc: "Statement furniture that handles commercial wear effortlessly." },
   
 ];
@@ -150,7 +150,7 @@ const CoffeeDetail = () => {
         transition={{ duration: 0.7 }}
       >
         <h2 className="text-3xl md:text-5xl font-display font-bold text-slate-900 mb-4">
-          From waste to wonder — a material journey that closes the loop.
+          From waste to wonder a material journey that closes the loop.
         </h2>
       </motion.div>
     </div>
@@ -264,12 +264,12 @@ const CoffeeDetail = () => {
   </div>
 </section>
     {/* SECTION 4: FEATURES - Full Image Block on Hover */}
-<section className="relative py-24 lg:py-32 overflow-hidden bg-slate-950">
-  {/* 1. Background Image - Normal state mein clear dikhegi */}
+{/* <section className="relative py-24 lg:py-32 overflow-hidden bg-slate-950">
+ 
   <div className="absolute inset-0 z-0">
     <img 
       src={chinabbench1}
-      className="w-full h-full object-cover object-center" 
+      className="w-full h-full object-cover object-center " 
       alt="Recycled Texture Background"
     />
     <div className="absolute inset-0 bg-black/35"></div> 
@@ -286,14 +286,14 @@ const CoffeeDetail = () => {
   transition={{ duration: 0.7 }}
   className="text-center max-w-3xl mx-auto mb-20"
 >
-  {/* Chinab Sofa - Accent Color, No Shadow */}
+  
   <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
     Coffee Table
   </h2>
   
-  {/* Sub-heading - Pure White, No Shadow */}
+  
   <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight opacity-90">
-    Built to Perform.
+   Modern Design, Built to Perform.
   </h3>
 </motion.div>
 
@@ -306,12 +306,10 @@ const CoffeeDetail = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: i * 0.1 }}
           
-          /* --- THE IMAGE BLOCK LOGIC --- */
-          /* Normal: Semi-transparent (#0d2119/40) jisme se image dikhegi */
-          /* Hover: Solid opacity (#0d2119) jisse image poori tarah chhup jayegi */
+          
           className="relative p-10 rounded-[2.5rem] bg-[#0d2119]/40 border border-white/10 shadow-2xl transition-all duration-500 ease-in-out group overflow-hidden hover:bg-[#0d2119] hover:bg-opacity-100 hover:border-[#A3E635]/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         >
-          {/* Greenish Aura Glow - hover par aur prominent ho jayega */}
+          
           <div className="absolute inset-0 bg-gradient-to-br from-[#A3E635]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <div className="relative z-10">
@@ -333,7 +331,67 @@ const CoffeeDetail = () => {
   </div>
 </section>
       
+ */}
 
+ <section 
+  className="relative py-24 lg:py-32 overflow-hidden bg-slate-950 bg-cover bg-center bg-fixed"
+  style={{ 
+    // Hero section logic applied here for stability
+    backgroundImage: `linear-gradient(to bottom, rgba(10,26,18,0.9) 0%, rgba(10,26,18,0.3) 50%, rgba(10,26,18,0.9) 100%), url(${chinabbench1})` 
+  }}
+>
+  {/* Radial Gradient Overlay for depth */}
+  <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_40%,rgba(10,26,18,0.8)_0%,rgba(10,26,18,0)_70%)]"></div>
+
+  <div className="container mx-auto px-6 lg:px-12 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7 }}
+      className="text-center max-w-3xl mx-auto mb-20"
+    >
+      <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
+        Coffee Table
+      </h2>
+      
+      <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight opacity-90">
+        Modern Design, Built to Perform.
+      </h3>
+    </motion.div>
+
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+      {features.map((f, i) => (
+        <motion.div
+          key={f.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+          // Card design exactly as before: bg-[#0d2119]/40
+          className="relative p-10 rounded-[2.5rem] bg-[#0d2119]/40 border border-white/10 shadow-2xl transition-all duration-500 ease-in-out group overflow-hidden hover:bg-[#0d2119] hover:bg-opacity-100 hover:border-[#A3E635]/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+        >
+          {/* Greenish Aura Glow on hover */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#A3E635]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+          <div className="relative z-10">
+            <div className="w-16 h-16 rounded-2xl bg-[#A3E635]/10 flex items-center justify-center mb-8 group-hover:bg-[#A3E635] group-hover:scale-110 transition-all duration-300">
+              <f.icon className="h-7 w-7 text-[#A3E635] group-hover:text-black transition-colors duration-300" />
+            </div>
+            
+            <h3 className="text-2xl font-bold text-white mb-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.9)]">
+              {f.title}
+            </h3>
+            
+            <p className="text-slate-300 leading-relaxed text-lg group-hover:text-white transition-colors duration-300">
+              {f.desc}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
     
       {/* SECTION 6: USE CASES */}
      <section className="py-24 lg:py-32 bg-[#F1F8F5] border-t border-green-50">
@@ -346,7 +404,7 @@ const CoffeeDetail = () => {
       className="text-center max-w-3xl mx-auto mb-16"
     >
       <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-        One table, Infinite settings.
+        Designed for Modern Living
       </h2>
     </motion.div>
 
@@ -382,7 +440,7 @@ const CoffeeDetail = () => {
             className="max-w-3xl mx-auto"
           >
             <h2 className="text-3xl md:text-5xl  font-display font-bold text-forground mb-6">
-              Bring Sustainable Table Design That Makes an Impact
+              Bring Sustainable Design That Makes an Impact
             </h2>
             <p className="text-lg opacity-80 mb-10 max-w-xl mx-auto leading-relaxed">
               Whether for your home, office, or commercial project — let's start the conversation.

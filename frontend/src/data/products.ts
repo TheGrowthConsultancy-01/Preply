@@ -18,6 +18,8 @@ import chinabsofa from "@/assets/hero1.png";
 import coffeehero from "@/assets/coffee-hero.png";
 import coffee2 from "@/assets/coffee-2.png";
 import coffee3 from "@/assets/coffee-3.png";
+import coffee4 from "@/assets/coffee-4.png";
+import coffee1 from "@/assets/coffee-1.jpeg";
 
 
 export const products = [
@@ -71,10 +73,10 @@ export const products = [
     tagline: "MINIMALIST & SUSTAINABLE",
     desc: "Minimal furniture crafted from recycled plastic sheets. Modern design meets environmental responsibility — a centerpiece with purpose.",
     fullDesc: "Every Preply’s coffee table begins its journey as discarded plastic — transformed through innovation into a material that rivals the warmth of wood, the durability of stone, and the conscience of a better tomorrow. Conscious living isn't about compromise — it's about choosing pieces that reflect your values without sacrificing your taste. The Preply’s coffee table is a quiet statement: that beautiful design and environmental responsibility can share the same room.",
-    image: "furniture", // Main image (Pair 1 - Big)
+    image: coffee1, // Main image (Pair 1 - Big)
     image2: coffee2, // Detail image (Pair 1 - Small)
     image3: coffee3, // Lifestyle background (Pair 2 - Big)
-    image4: "coffeeTableTop", // Top view (Pair 2 - Small)
+    image4: coffee4, // Top view (Pair 2 - Small)
     heroImage: coffeehero, // Hero section background
     whatsapp: "Coffee Table",
     features: ["Waterproof", "Scratch Resistant", "100% Recycled"] 

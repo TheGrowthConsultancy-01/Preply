@@ -273,9 +273,9 @@ const ProductDetail = () => {
   </div>
 </section>
     {/* SECTION 4: FEATURES - Full Image Block on Hover */}
-<section className="relative py-24 lg:py-32 overflow-hidden bg-slate-950">
-  {/* 1. Background Image - Normal state mein clear dikhegi */}
-  <div className="absolute inset-0 z-0">
+{/* <section className="relative py-24 lg:py-32 overflow-hidden bg-slate-950">
+ 
+  <div className="absolute inset-0 z-0 ">
     <img 
       src={chinabbench1}
       className="w-full h-full object-cover object-center" 
@@ -295,12 +295,12 @@ const ProductDetail = () => {
   transition={{ duration: 0.7 }}
   className="text-center max-w-3xl mx-auto mb-20"
 >
-  {/* Chinab Sofa - Accent Color, No Shadow */}
+  
   <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
     Chinab Sofa
   </h2>
   
-  {/* Sub-heading - Pure White, No Shadow */}
+  
   <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight opacity-90">
     Built Different. Built Better.
   </h3>
@@ -315,12 +315,10 @@ const ProductDetail = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: i * 0.1 }}
           
-          /* --- THE IMAGE BLOCK LOGIC --- */
-          /* Normal: Semi-transparent (#0d2119/40) jisme se image dikhegi */
-          /* Hover: Solid opacity (#0d2119) jisse image poori tarah chhup jayegi */
+          
           className="relative p-10 rounded-[2.5rem] bg-[#0d2119]/40 border border-white/10 shadow-2xl transition-all duration-500 ease-in-out group overflow-hidden hover:bg-[#0d2119] hover:bg-opacity-100 hover:border-[#A3E635]/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         >
-          {/* Greenish Aura Glow - hover par aur prominent ho jayega */}
+          
           <div className="absolute inset-0 bg-gradient-to-br from-[#A3E635]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <div className="relative z-10">
@@ -340,21 +338,17 @@ const ProductDetail = () => {
       ))}
     </div>
   </div>
-</section>
+</section> */}
       
-
-      {/* SECTION 4: FEATURES - Custom Color Tones for Bench Image */}
-{/* <section className="relative py-24 lg:py-32 overflow-hidden">
-  
-  <div className="absolute inset-0 z-0">
-    <img 
-      src={chinabbench1}
-      className="w-full h-full object-cover object-center scale-105"
-      alt="Recycled Texture Background"
-    />
-    
-    <div className="absolute inset-0 bg-[#0a1a12]/85 backdrop-blur-[3px]"></div>
-  </div>
+<section 
+  className="relative py-24 lg:py-32 overflow-hidden bg-slate-950 bg-cover bg-center bg-fixed"
+  style={{ 
+    // Hero logic: Stretch-proof background implementation
+    backgroundImage: `linear-gradient(to bottom, rgba(10,26,18,0.9) 0%, rgba(10,26,18,0.3) 50%, rgba(10,26,18,0.9) 100%), url(${chinabbench1})` 
+  }}
+>
+  {/* Radial Glow Overlay - for visual depth */}
+  <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_40%,rgba(10,26,18,0.8)_0%,rgba(10,26,18,0)_70%)]"></div>
 
   <div className="container mx-auto px-6 lg:px-12 relative z-10">
     <motion.div
@@ -362,16 +356,20 @@ const ProductDetail = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.7 }}
-      className="text-center max-w-3xl mx-auto mb-16"
+      className="text-center max-w-3xl mx-auto mb-20"
     >
-      
-      <p className="text-sm font-bold uppercase tracking-[0.3em] text-[#A3E635] mb-4">Features</p>
-      <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
-        Built Different. Built Better.
+      {/* Chinab Sofa Title */}
+      <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
+        Chinab Sofa
       </h2>
+      
+      {/* Sub-heading */}
+      <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight opacity-90">
+        Built Different. Built Better.
+      </h3>
     </motion.div>
 
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
       {features.map((f, i) => (
         <motion.div
           key={f.title}
@@ -380,23 +378,34 @@ const ProductDetail = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: i * 0.1 }}
           
-          className="p-8 rounded-[2rem] bg-white/5 backdrop-blur-lg border border-white/10 shadow-2xl hover:bg-white/10 hover:border-[#A3E635]/50 transition-all duration-500 group"
+          /* Card Design - Original Formatting maintained */
+          className="relative p-10 rounded-[2.5rem] bg-[#0d2119]/40 border border-white/10 shadow-2xl transition-all duration-500 ease-in-out group overflow-hidden hover:bg-[#0d2119] hover:bg-opacity-100 hover:border-[#A3E635]/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         >
-          
-          <div className="w-14 h-14 rounded-2xl bg-[#A3E635]/10 flex items-center justify-center mb-6 group-hover:bg-[#A3E635] transition-all duration-300">
-            <f.icon className="h-6 w-6 text-[#A3E635] group-hover:text-black transition-colors duration-300" />
+          {/* Greenish Aura Glow on hover */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#A3E635]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+          <div className="relative z-10">
+            {/* Icon Container */}
+            <div className="w-16 h-16 rounded-2xl bg-[#A3E635]/10 flex items-center justify-center mb-8 group-hover:bg-[#A3E635] group-hover:scale-110 transition-all duration-300">
+              <f.icon className="h-7 w-7 text-[#A3E635] group-hover:text-black transition-colors duration-300" />
+            </div>
+            
+            {/* Feature Title */}
+            <h3 className="text-2xl font-bold text-white mb-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.9)]">
+              {f.title}
+            </h3>
+            
+            {/* Feature Description */}
+            <p className="text-slate-300 leading-relaxed text-lg group-hover:text-white transition-colors duration-300">
+              {f.desc}
+            </p>
           </div>
-          <h3 className="text-xl font-bold text-white mb-3">{f.title}</h3>
-          <p className="text-slate-300 leading-relaxed group-hover:text-white transition-colors">
-            {f.desc}
-          </p>
         </motion.div>
       ))}
     </div>
   </div>
-</section> */}
-
-      {/* SECTION 5: COMPARISON TABLE */}
+</section>
+      
       {/* SECTION 5: COMPARISON TABLE - Width Matched with Heading */}
 <section className="py-24 lg:py-32 bg-white">
   {/* max-w-4xl ko hata kar max-w-fit kiya taaki container sirf text/table jitna hi failay */}
