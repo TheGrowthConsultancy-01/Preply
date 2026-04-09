@@ -12,8 +12,10 @@ import chinab3 from "@/assets/chinab-3.png";
 import chinab4 from "@/assets/chinab-4.png";
 import chinab5 from "@/assets/chinab-5.png";
 import chinab6 from "@/assets/chinab-6.png";
-import hawker1 from "@/assets/hawker-1.png";
-import hawker2 from "@/assets/hawker-2.png";
+import hawkercart1 from "@/assets/hawker cart 1.png";
+import hawkercart2 from "@/assets/hawker cart 2.png";
+import hawkercart3 from "@/assets/hawker cart 3.png";
+import hawkercart4 from "@/assets/hawker cart 4.png";
 import hawkerhero from "@/assets/hawker-hero.png";  
 import chinabsofa from "@/assets/hero1.png";
 import coffeehero from "@/assets/coffee-hero.png";
@@ -45,10 +47,10 @@ export const products = [
     tagline: "STRENGTH IN EVERY MOVE",
     desc: "Heavy-duty sustainable furniture built for mobility and extreme conditions.",
     fullDesc: "Preply’s Sustainable Handcart is not just a product it’s a new standard for street vending. Crafted using advanced plastic plysheets made from recycled waste, this handcart replaces traditional wood with a smarter, more durable, and future-ready alternative.",
-    image: hawker1, 
-    image2: hawker2, 
-    image3: hawker1,
-    image4: hawker2,
+    image: hawkercart1, 
+    image2: hawkercart2, 
+    image3: hawkercart3,
+    image4: hawkercart4,
     heroImage: hawkerhero,
     whatsapp: "Hawker Product"
   },
