@@ -65,9 +65,10 @@ import wasteCollection from "@/assets/waste-collection.jpg";
 import chinabsofahero from "@/assets/chinabsofa-hero.png";
 import coffeehome from "@/assets/coffee-home.png";
 import hawkerhome from "@/assets/hawker-home.png";
+import wrapperhome from "@/assets/wrapper-home.png";
 
 const products = [
-  { id: "bin", name: "Wrapper Bin", desc: "Made from chocolate wrapper plastic waste...", image: wasteCollection, cta: "Adopt a Wrapper Bin" },
+  { id: "bin", name: "Wrapper Bin", desc: "Made from chocolate wrapper plastic waste...", image: wrapperhome, cta: "Adopt a Wrapper Bin" },
   { id: "chinab-sofa", name: "Chinab Sofa", desc: "Inspired by the engineering strength...", image: chinabsofahero, cta: "Enquire Now" },
   { id: "coffee-table", name: "Coffee Table", desc: "Minimal furniture crafted from recycled plastic sheets...", image: coffeehome, cta: "Enquire Now" },
   { id: "awards", name: "Awards & Mementos", desc: "Transforming recycled plastic waste into meaningful awards...", image: furniture, cta: "Awards & Mementos" },

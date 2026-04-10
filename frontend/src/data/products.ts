@@ -23,6 +23,7 @@ import coffee2 from "@/assets/coffee-2.png";
 import coffee3 from "@/assets/coffee-3.png";
 import coffee4 from "@/assets/coffee-4.png";
 import coffee1 from "@/assets/coffee-1.jpeg";
+import wrapperhero from "@/assets/wrapper-hero.png";
 
 
 export const products = [
@@ -65,7 +66,7 @@ export const products = [
     image2: "bin2", 
     image3: "bin1",
     image4: "bin2",
-    heroImage: "binHero",
+    heroImage: wrapperhero,
     whatsapp: "Bin Enquiry",
     features: ["Weather Proof", "Zero Maintenance", "Eco-Friendly"]
   },

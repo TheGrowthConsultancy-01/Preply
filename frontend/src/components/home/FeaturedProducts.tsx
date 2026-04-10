@@ -7,13 +7,14 @@ import wasteCollection from "@/assets/waste-collection.jpg";
 import chinabsofahero from "@/assets/chinabsofa-hero.png";
 import coffeehome from "@/assets/coffee-home.png";
 import hawkerhome from "@/assets/hawker-home.png";
+import wrapperhome from "@/assets/wrapper-home.png";
 
 const products = [
   {
     id: "bin",
     name: "Wrapper Bin",
     desc: "Made from chocolate wrapper waste collected via NGOs from schools and communities.",
-    image: wasteCollection,
+    image: wrapperhome,
     whatsapp: "Wrapper Bin",
   },
   {
