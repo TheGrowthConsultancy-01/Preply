@@ -24,7 +24,10 @@ import coffee3 from "@/assets/coffee-3.png";
 import coffee4 from "@/assets/coffee-4.png";
 import coffee1 from "@/assets/coffee-1.jpeg";
 import wrapperhero from "@/assets/wrapper-hero.png";
-
+import wrapperbin1 from "@/assets/wrapper bin 1.png";
+import wrapperbin2 from "@/assets/wrapper bin 2.png";
+import wrapperbin3 from "@/assets/wrapper bin 3.png";
+import wrapperbin4 from "@/assets/wrapper bin 4.png";
 
 export const products = [
   {
@@ -62,10 +65,10 @@ export const products = [
     tagline: "SMART WASTE MANAGEMENT",
     desc: "Heavy-duty recycled plastic bins built for durability and sustainability.",
     fullDesc: "Preply’s Wrapper Bin is engineered using recycled chocolate wrapper waste collected through NGOs working with schools and communities. It transforms low-value plastic into a high-impact product that promotes waste segregation, awareness, and circular use.",
-    image: "bin1", 
-    image2: "bin2", 
-    image3: "bin1",
-    image4: "bin2",
+    image: wrapperbin3, 
+    image2: wrapperbin1, 
+    image3: wrapperbin4,
+    image4: wrapperbin2,
     heroImage: wrapperhero,
     whatsapp: "Bin Enquiry",
     features: ["Weather Proof", "Zero Maintenance", "Eco-Friendly"]
