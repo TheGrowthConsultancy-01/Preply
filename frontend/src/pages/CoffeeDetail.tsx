@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
+import coffeemiddle from "@/assets/coffee-middle.png";
 import chinabbench1 from "@/assets/chinab-bench1.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
@@ -337,7 +338,7 @@ const CoffeeDetail = () => {
   className="relative py-24 lg:py-32 overflow-hidden bg-slate-950 bg-cover bg-center bg-fixed"
   style={{ 
     // Hero section logic applied here for stability
-    backgroundImage: `linear-gradient(to bottom, rgba(10,26,18,0.9) 0%, rgba(10,26,18,0.3) 50%, rgba(10,26,18,0.9) 100%), url(${chinabbench1})` 
+    backgroundImage: `linear-gradient(to bottom, rgba(10,26,18,0.9) 0%, rgba(10,26,18,0.3) 50%, rgba(10,26,18,0.9) 100%), url(${coffeemiddle})` 
   }}
 >
   {/* Radial Gradient Overlay for depth */}

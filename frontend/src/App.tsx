@@ -47,7 +47,7 @@ const App = () => (
           </Routes>
         </main>
                 <Footer />
-        <WhatsAppSticky />
+        {/* <WhatsAppSticky /> */}
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

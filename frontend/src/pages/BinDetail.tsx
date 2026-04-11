@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { products } from "@/data/products";
 import { Button } from "@/components/ui/button";
+import wrappermiddle from "@/assets/wrapper-middle.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Trash2, Cog, Layers, Trash, Shield, Droplets, 
@@ -279,20 +280,14 @@ const BinDetail = () => {
       {/* SECTION 4: FEATURES - Exact Sofa Style with Background Image & Hover Glow */}
 {/* SECTION 4: FEATURES - Compact 4-Column Layout */}
 {/* SECTION 4: FEATURES - Compact 4-Column with Sofa Color Logic */}
-<section className="relative py-24 lg:py-32 overflow-hidden bg-slate-950">
-  
-  {/* 1. Background Image Layer */}
-  <div className="absolute inset-0 z-0">
-    <img 
-      src={product.image3} 
-      className="w-full h-full object-cover object-center" 
-      alt="Background Texture"
-    />
-    <div className="absolute inset-0 bg-black/35"></div> 
-  </div>
-
-  {/* 2. Radial Gradient Overlay (Sofa Style) */}
-  <div className="absolute inset-0 z-5 bg-[radial-gradient(circle_at_50%_40%,rgba(10,26,18,0.9)_0%,rgba(10,26,18,0)_70%)]"></div>
+<section 
+  className="relative py-24 lg:py-32 overflow-hidden bg-slate-950 bg-cover bg-center bg-fixed"
+  style={{ 
+    backgroundImage: `linear-gradient(to bottom, rgba(10,26,18,0.9) 0%, rgba(10,26,18,0.3) 50%, rgba(10,26,18,0.9) 100%), url(${wrappermiddle})` 
+  }}
+>
+  {/* Radial Gradient Overlay for depth */}
+  <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_40%,rgba(10,26,18,0.8)_0%,rgba(10,26,18,0)_70%)]"></div>
 
   <div className="container mx-auto px-6 lg:px-12 relative z-10">
     <motion.div
@@ -305,6 +300,7 @@ const BinDetail = () => {
       <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
         {product.name}
       </h2>
+      
       <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight opacity-90">
         Built Different. Built Better.
       </h3>
@@ -319,13 +315,9 @@ const BinDetail = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: i * 0.1 }}
-          
-          /* --- THE SOFA COLOR LOGIC --- */
-          /* Normal state: bg-[#0d2119]/40 (Transparent) */
-          /* Hover state: bg-[#0d2119] (Solid 100% Opacity) */
-          className="relative p-8 rounded-[2.5rem] bg-[#0d2119]/40 border border-white/10 shadow-2xl transition-all duration-500 ease-in-out group overflow-hidden hover:bg-[#0d2119] hover:bg-opacity-100 hover:border-[#A3E635]/60"
+          className="relative p-8 rounded-[2.5rem] bg-[#0d2119]/40 border border-white/10 shadow-2xl transition-all duration-500 ease-in-out group overflow-hidden hover:bg-[#0d2119] hover:bg-opacity-100 hover:border-[#A3E635]/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         >
-          {/* Greenish Aura Glow */}
+          {/* Greenish Aura Glow on hover */}
           <div className="absolute inset-0 bg-gradient-to-br from-[#A3E635]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
           <div className="relative z-10 text-center flex flex-col items-center">
@@ -335,11 +327,11 @@ const BinDetail = () => {
             </div>
             
             {/* Title with Shadow logic */}
-            <h3 className="text-lg md:text-xl font-bold text-white leading-snug [text-shadow:0_2px_8px_rgba(0,0,0,0.9)] group-hover:text-white transition-colors duration-300">
+            <h3 className="text-lg md:text-xl font-bold text-white leading-snug [text-shadow:0_2px_8px_rgba(0,0,0,0.9)] transition-colors duration-300">
               {f.title}
             </h3>
             
-            {/* Description (Agar ho toh) */}
+            {/* Description with Color Transition */}
             {f.desc && (
                <p className="mt-4 text-sm text-slate-300 group-hover:text-white transition-colors duration-300">
                  {f.desc}

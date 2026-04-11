@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import hawkermiddle from "@/assets/hawker-middle.png"; // Middle section background
 import chinabbench1 from "@/assets/chinab-bench1.png"; // Texture background ke liye
 import { 
   Trash2, Cog, Layers, Truck, ArrowRight, 
@@ -205,77 +206,63 @@ const productId = "hawker";
   </div>
 </section>
       {/* SECTION 3: FEATURES - Background Image Logic */}
-      <section className="relative py-24 lg:py-32 overflow-hidden bg-slate-950">
-        {/* 1. Background Image - Normal state mein clear dikhegi */}
-        <div className="absolute inset-0 z-0">
-            <img 
-            src={hawkerbg} 
-            className="w-full h-full object-cover object-center" 
-            alt="Recycled Texture Background"
-            />
-            <div className="absolute inset-0 bg-black/35"></div> 
-        </div>
+<section 
+  className="relative py-24 lg:py-32 overflow-hidden bg-slate-950 bg-cover bg-center bg-fixed"
+  style={{ 
+    backgroundImage: `linear-gradient(to bottom, rgba(10,26,18,0.9) 0%, rgba(10,26,18,0.3) 50%, rgba(10,26,18,0.9) 100%), url(${hawkermiddle})` 
+  }}
+>
+  {/* Radial Gradient Overlay for depth */}
+  <div className="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_40%,rgba(10,26,18,0.8)_0%,rgba(10,26,18,0)_70%)]"></div>
 
-        {/* 2. Radial Gradient Overlay - Jo tumhare sofa code mein tha */}
-        <div className="absolute inset-0 z-5 bg-[radial-gradient(circle_at_50%_40%,rgba(10,26,18,0.9)_0%,rgba(10,26,18,0)_70%)]"></div>
+  <div className="container mx-auto px-6 lg:px-12 relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7 }}
+      className="text-center max-w-3xl mx-auto mb-20"
+    >
+      <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
+        Hawker Cart
+      </h2>
+      
+      <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight opacity-90">
+        Built to Perform, Designed to Last
+      </h3>
+    </motion.div>
 
-        <div className="container mx-auto px-6 lg:px-12 relative z-10">
-            <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
-            className="text-center max-w-3xl mx-auto mb-20"
-            >
-            {/* Hawker - Accent Color, No Shadow */}
-            <h2 className="text-4xl md:text-6xl font-display font-extrabold text-[#A3E635] mb-6 tracking-tight">
-                Hawker Cart
-            </h2>
-            
-            {/* Sub-heading - Pure White, No Shadow */}
-            <h3 className="text-3xl md:text-5xl font-bold text-white leading-tight opacity-90">
-                Built to Perform, Designed to Last
-            </h3>
-            </motion.div>
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+      {hawkerFeatures.map((f, i) => (
+        <motion.div
+          key={f.title}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: i * 0.1 }}
+          className="relative p-10 rounded-[2.5rem] bg-[#0d2119]/40 border border-white/10 shadow-2xl transition-all duration-500 ease-in-out group overflow-hidden hover:bg-[#0d2119] hover:bg-opacity-100 hover:border-[#A3E635]/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+        >
+          {/* Greenish Aura Glow on hover */}
+          <div className="absolute inset-0 bg-gradient-to-br from-[#A3E635]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-            {hawkerFeatures.map((f, i) => (
-                <motion.div
-                key={f.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                
-                /* --- THE STYLING BLOCK --- */
-                /* Normal: Semi-transparent (#0d2119/40) */
-                /* Hover: Solid (#0d2119), Border accent, aur Shadow Glow */
-                className="relative p-10 rounded-[2.5rem] bg-[#0d2119]/40 border border-white/10 shadow-2xl transition-all duration-500 ease-in-out group overflow-hidden hover:bg-[#0d2119] hover:bg-opacity-100 hover:border-[#A3E635]/60 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                >
-                {/* Greenish Aura Glow - hover par prominent hota hai */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#A3E635]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                <div className="relative z-10">
-                    {/* Icon Box with Scale and Color Transition */}
-                    <div className="w-16 h-16 rounded-2xl bg-[#A3E635]/10 flex items-center justify-center mb-8 group-hover:bg-[#A3E635] group-hover:scale-110 transition-all duration-300">
-                    <f.icon className="h-7 w-7 text-[#A3E635] group-hover:text-black transition-colors duration-300" />
-                    </div>
-                    
-                    {/* Title with Text Shadow logic */}
-                    <h3 className="text-2xl font-bold text-white mb-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.9)]">
-                    {f.title}
-                    </h3>
-                    
-                    {/* Description with Color Transition */}
-                    <p className="text-slate-300 leading-relaxed text-lg group-hover:text-white transition-colors duration-300">
-                    {f.desc}
-                    </p>
-                </div>
-                </motion.div>
-            ))}
+          <div className="relative z-10">
+            <div className="w-16 h-16 rounded-2xl bg-[#A3E635]/10 flex items-center justify-center mb-8 group-hover:bg-[#A3E635] group-hover:scale-110 transition-all duration-300">
+              <f.icon className="h-7 w-7 text-[#A3E635] group-hover:text-black transition-colors duration-300" />
             </div>
-        </div>
-        </section>
+            
+            <h3 className="text-2xl font-bold text-white mb-4 [text-shadow:0_2px_8px_rgba(0,0,0,0.9)]">
+              {f.title}
+            </h3>
+            
+            <p className="text-slate-300 leading-relaxed text-lg group-hover:text-white transition-colors duration-300">
+              {f.desc}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
       {/* SECTION 4: USE CASES */}
       <section className="py-24 lg:py-32 bg-[#F1F8F5] border-t border-green-50">
   <div className="container mx-auto px-6 lg:px-12">
