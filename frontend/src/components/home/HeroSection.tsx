@@ -16,17 +16,23 @@ const HeroSection = () => {
 
       <div className="container relative z-10 pt-32 pb-20">
         <div className="max-w-3xl">
-          <p className="text-secondary font-display font-medium tracking-widest uppercase text-sm mb-6 animate-fade-in">
+          {/* <p className="text-secondary font-display font-medium tracking-widest uppercase text-sm mb-6 animate-fade-in">
             Recycled Plastic Sheets & Products
-          </p>
+          </p> */}
+       <p className="text-[#A3E635] font-display font-bold tracking-[0.2em] uppercase text-sm mb-6 animate-fade-in">
+    Recycled Plastic Sheets & Products
+  </p>
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-primary-foreground leading-[1.1] mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Engineering Waste
             <br />
             <span className="text-secondary">Into Tomorrow.</span>
           </h1>
-          <p className="text-primary-foreground/70 text-lg md:text-xl max-w-xl leading-relaxed mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          {/* <p className="text-primary-foreground/70 text-lg md:text-xl max-w-xl leading-relaxed mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             High-performance plastic sheets and products made from reclaimed waste — transforming environmental problems into sustainable materials.
-          </p>
+          </p> */}
+          <p className="text-primary-foreground/90 text-lg md:text-xl max-w-xl leading-relaxed mb-10 animate-fade-in font-medium" style={{ animationDelay: "0.2s" }}>
+    High-performance plastic sheets and products made from reclaimed waste — transforming environmental problems into sustainable materials.
+  </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-display" asChild>
               <Link to="/products">

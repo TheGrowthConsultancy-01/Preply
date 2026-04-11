@@ -11,7 +11,8 @@ import {
   Lightbulb, Recycle, ShieldCheck,
   CalendarDays,
   Trees,
-  GraduationCap, Heart,Globe, HeartHandshake
+  GraduationCap, Heart,Globe, HeartHandshake,
+  MessageCircle
 } from "lucide-react";
 
 // Bin Specific Steps
@@ -233,6 +234,7 @@ const BinDetail = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2"
           >
+            <MessageCircle size={20} />
             WhatsApp Enquiry
           </a>
         </Button>

@@ -8,7 +8,8 @@ import {
   ShieldCheck, Sun, Drill, Zap, Recycle,
   Check, X, Construction, Phone, FileText,
   Store, MapPin, Factory, HardHat,Clock, Sparkles,Leaf, TreeDeciduous,
-  Building2,  
+  Building2,
+  MessageCircle,  
 } from "lucide-react";
 import hawkerbg from "@/assets/hawker-bg.png"; // Hawker specific background image
 import { products } from "@/data/products";
@@ -167,6 +168,7 @@ const productId = "hawker";
             rel="noopener noreferrer"
             className="flex items-center gap-2"
           >
+            <MessageCircle size={20} />
             WhatsApp Enquiry
           </a>
         </Button>

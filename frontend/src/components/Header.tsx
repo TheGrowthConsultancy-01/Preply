@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, MessageCircle, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import preplyLogo from "@/assets/preply-logo.png";
 
@@ -47,6 +47,7 @@ const Header = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
+              <MessageCircle size={20} />
               WhatsApp Enquiry
             </a>
           </Button>

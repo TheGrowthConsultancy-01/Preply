@@ -14,7 +14,8 @@ import {
   Table2,
   Recycle,
   Sparkles,
-  ShieldCheck
+  ShieldCheck,
+  MessageCircle
 } from "lucide-react";
 
 const steps = [
@@ -227,6 +228,7 @@ const CoffeeDetail = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-2"
           >
+            <MessageCircle size={20} />
             WhatsApp Enquiry
           </a>
         </Button>
