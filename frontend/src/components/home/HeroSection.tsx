@@ -25,7 +25,7 @@ const HeroSection = () => {
           <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold text-primary-foreground leading-[1.1] mb-6 animate-fade-in" style={{ animationDelay: "0.1s" }}>
             Engineering Waste
             <br />
-            <span className="text-secondary">Into Tomorrow.</span>
+            <span className="text-[#A3E635]">Into Tomorrow.</span>
           </h1>
           {/* <p className="text-primary-foreground/70 text-lg md:text-xl max-w-xl leading-relaxed mb-10 animate-fade-in" style={{ animationDelay: "0.2s" }}>
             High-performance plastic sheets and products made from reclaimed waste — transforming environmental problems into sustainable materials.
@@ -34,7 +34,7 @@ const HeroSection = () => {
     High-performance plastic sheets and products made from reclaimed waste — transforming environmental problems into sustainable materials.
   </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-display" asChild>
+            <Button size="lg" className="bg-[#A3E635] text-secondary-foreground hover:bg-[#A3E635]/90 font-display" asChild>
               <Link to="/products">
                 Explore Products
                 <ArrowRight size={18} className="ml-2" />
