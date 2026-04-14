@@ -792,7 +792,7 @@ const ProductDetail = () => {
       </section>
 
       {/* SECTION 7: CTA */}
-      <section className="py-24 lg:py-32 bg-[#0F172A] text-white">
+      {/* <section className="py-24 lg:py-32 bg-[#0F172A] text-white">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">Build Sustainable Spaces Today</h2>
           <p className="text-lg opacity-80 mb-12 max-w-xl mx-auto">Transform your environment with the durability and style of {product.name}.</p>
@@ -805,8 +805,92 @@ const ProductDetail = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
+      {/* <section 
+  className="relative py-24 lg:py-32 overflow-hidden bg-slate-950 bg-cover bg-center bg-fixed"
+  style={{ 
+    // Linear gradient wahi same dark navy/slate blue (#0F172A) jo original bg ka tha
+    backgroundImage: ` url(${product.cta})` 
+  }}
+>
+  <div className="container mx-auto px-6 text-center relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+        Build Sustainable Spaces Today
+      </h2>
       
+      
+      <p className="text-lg text-white opacity-80 mb-12 max-w-xl mx-auto">
+        Transform your environment with the durability and style of {product.name}.
+      </p>
+      
+      <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <Button 
+          variant="outline" 
+          className="h-14 px-10 rounded-full border-white/20 text-white bg-transparent hover:bg-white/10 text-lg font-bold"
+        >
+          <Phone className="mr-2 h-5 w-5" /> Contact Us
+        </Button>
+        
+        <Button 
+          variant="outline" 
+          className="h-14 px-10 rounded-full border-white/20 text-white bg-transparent hover:bg-white/10 text-lg font-bold"
+        >
+          <FileText className="mr-2 h-5 w-5" /> Download Brochure
+        </Button>
+      </div>
+    </motion.div>
+  </div>
+</section>
+       */}
+
+       <section 
+  className="relative py-24 lg:py-32 overflow-hidden bg-cover bg-center" // 'bg-fixed' nikal diya hai
+  style={{ 
+    backgroundImage: `url(${product.cta})` 
+  }}
+>
+  {/* Light overlay taaki text aur image balance rahein */}
+  <div className="absolute inset-0 bg-black/10 z-0"></div> 
+
+  <div className="container mx-auto px-6 text-center relative z-10">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.4)]">
+        Build Sustainable Spaces Today
+      </h2>
+      
+      <p className="text-lg text-white opacity-90 mb-12 max-w-xl mx-auto [text-shadow:0_2px_8px_rgba(0,0,0,0.4)]">
+        Transform your environment with the durability and style of {product.name}.
+      </p>
+      
+      <div className="flex flex-col sm:flex-row justify-center gap-4">
+        <Button 
+          variant="outline" 
+          className="h-14 px-10 rounded-full border-white/30 text-white bg-black/10 backdrop-blur-sm hover:bg-white/20 text-lg font-bold"
+        >
+          <Phone className="mr-2 h-5 w-5" /> Contact Us
+        </Button>
+        
+        <Button 
+          variant="outline" 
+          className="h-14 px-10 rounded-full border-white/30 text-white bg-black/10 backdrop-blur-sm hover:bg-white/20 text-lg font-bold"
+        >
+          <FileText className="mr-2 h-5 w-5" /> Download Brochure
+        </Button>
+      </div>
+    </motion.div>
+  </div>
+</section>
     </div>
   );
 };

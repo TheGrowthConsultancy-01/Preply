@@ -28,6 +28,7 @@ import wrapperbin1 from "@/assets/wrapper bin 1.png";
 import wrapperbin2 from "@/assets/wrapper bin 2.png";
 import wrapperbin3 from "@/assets/wrapper bin 3.png";
 import wrapperbin4 from "@/assets/wrapper bin 4.png";
+import ctaimage from "@/assets/ctaimage.png";
 
 export const products = [
   {
@@ -42,7 +43,8 @@ export const products = [
     image4: chinab5 ,
     heroImage: chinabsofa, // Image 1 background
     whatsapp: "Chinab Sofa",
-    features: ["BWP Grade", "BWR (IS-303)", "MR Grade"] // Image 3 categories
+    features: ["BWP Grade", "BWR (IS-303)", "MR Grade"], // Image 3 categories
+    cta: ctaimage
   },
 
   {
@@ -56,7 +58,8 @@ export const products = [
     image3: hawkercart3,
     image4: hawkercart4,
     heroImage: hawkerhero,
-    whatsapp: "Hawker Product"
+    whatsapp: "Hawker Product",
+        cta: ctaimage
   },
 
   {
@@ -71,7 +74,8 @@ export const products = [
     image4: wrapperbin2,
     heroImage: wrapperhero,
     whatsapp: "Bin Enquiry",
-    features: ["Weather Proof", "Zero Maintenance", "Eco-Friendly"]
+    features: ["Weather Proof", "Zero Maintenance", "Eco-Friendly"],
+        cta: ctaimage
   },
 
   {
@@ -86,7 +90,8 @@ export const products = [
     image4: coffee4, // Top view (Pair 2 - Small)
     heroImage: coffeehero, // Hero section background
     whatsapp: "Coffee Table",
-    features: ["Waterproof", "Scratch Resistant", "100% Recycled"] 
+    features: ["Waterproof", "Scratch Resistant", "100% Recycled"] ,
+        cta: ctaimage
   },
   // baki products...
 ];
