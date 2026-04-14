@@ -110,7 +110,7 @@ const Products = () => {
                     
                     {/* 3. WHATSAPP BUTTON - stopPropagation lagaya hai taaki card click na ho */}
                     <a
-                      href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello, I am interested in ${p.name}.`)}`}
+                      href={`https://wa.me/919909628028?text=${encodeURIComponent(`Hello, I am interested in ${p.name}.`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()} 

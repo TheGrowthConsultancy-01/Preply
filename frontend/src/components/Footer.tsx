@@ -60,12 +60,12 @@ const Footer = () => {
                 info@preply.in
               </a>
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/919909628028"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-background transition-colors"
               >
-                WhatsApp: +91 99999 99999
+                WhatsApp: +91 99096 28028
               </a>
             </div>
           </div>

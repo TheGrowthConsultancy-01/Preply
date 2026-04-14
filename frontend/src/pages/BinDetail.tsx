@@ -229,7 +229,7 @@ const BinDetail = () => {
           asChild
         >
           <a
-            href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.name}. Please share details.`)}`}
+            href={`https://wa.me/919909628028?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.name}. Please share details.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2"

@@ -110,7 +110,7 @@ const FeaturedProducts = () => {
           
           {/* 3. WhatsApp Button - Isme stopPropagation lagaya hai taaki Link trigger na ho */}
           <a
-            href={`https://wa.me/919999999999?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.whatsapp}. Please share details.`)}`}
+            href={`https://wa.me/919909628028?text=${encodeURIComponent(`Hello PREPLY India, I am interested in ${product.whatsapp}. Please share details.`)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()} // Yeh line zaroori hai

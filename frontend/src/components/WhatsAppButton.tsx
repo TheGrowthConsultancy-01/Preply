@@ -10,7 +10,7 @@ const WhatsAppButton = ({ productName, className = "" }: WhatsAppButtonProps) =>
     ? `Hello PREPLY India, I am interested in ${productName}. Please share details.`
     : "Hello PREPLY India, I am interested in your products. Please share details.";
 
-  const url = `https://wa.me/919999999999?text=${encodeURIComponent(message)}`;
+  const url = `https://wa.me/919909628028?text=${encodeURIComponent(message)}`;
 
   return (
     <a

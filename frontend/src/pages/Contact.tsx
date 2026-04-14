@@ -12,7 +12,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const msg = `Hello PREPLY India, my name is ${form.name}. ${form.message} Contact: ${form.phone || form.email}`;
-    window.open(`https://wa.me/919999999999?text=${encodeURIComponent(msg)}`, "_blank");
+    window.open(`https://wa.me/919909628028?text=${encodeURIComponent(msg)}`, "_blank");
     toast({ title: "Redirecting to WhatsApp", description: "Your enquiry is being sent via WhatsApp." });
   };
 
@@ -36,7 +36,7 @@ const Contact = () => {
                 {[
                   { icon: MapPin, label: "PREPLY India Pvt Ltd", detail: "Manufacturing Facility, India" },
                   { icon: Mail, label: "Email", detail: "info@preply.in" },
-                  { icon: Phone, label: "Phone", detail: "+91 99999 99999" },
+                  { icon: Phone, label: "Phone", detail: "+91 99096 28028" },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">

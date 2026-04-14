@@ -159,7 +159,7 @@ const GVPSection = () => {
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 font-display" asChild>
                 <a
-                  href="https://wa.me/919999999999?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20the%20GVP%20Impact%20Collection.%20Please%20share%20details."
+                  href="https://wa.me/919909628028?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20the%20GVP%20Impact%20Collection.%20Please%20share%20details."
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -689,7 +689,7 @@ const ProductDetail = () => {
               </p>
               <Button asChild className="w-full sm:w-auto bg-[#166534] hover:bg-[#14532D] text-white font-bold px-10 py-7 rounded-full shadow-2xl">
                 
-                <a href={`https://wa.me/919999999999`} target="_blank"><MessageCircle size={20} />WhatsApp Enquiry</a>
+                <a href={`https://wa.me/919909628028`} target="_blank"><MessageCircle size={20} />WhatsApp Enquiry</a>
               </Button>
             </div>
 
