@@ -849,43 +849,42 @@ const ProductDetail = () => {
 </section>
        */}
 
-       <section 
-  className="relative py-24 lg:py-32 overflow-hidden bg-cover bg-center" // 'bg-fixed' nikal diya hai
-  style={{ 
-    backgroundImage: `url(${product.cta})` 
-  }}
->
-  {/* Light overlay taaki text aur image balance rahein */}
-  <div className="absolute inset-0 bg-black/10 z-0"></div> 
-
-  <div className="container mx-auto px-6 text-center relative z-10">
+       <section className="py-24 lg:py-32 bg-[#0F172A] text-white">
+  <div className="container mx-auto px-6 lg:px-12 text-center">
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
+      className="max-w-3xl mx-auto"
     >
-      <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.4)]">
+      <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6">
         Build Sustainable Spaces Today
       </h2>
       
-      <p className="text-lg text-white opacity-90 mb-12 max-w-xl mx-auto [text-shadow:0_2px_8px_rgba(0,0,0,0.4)]">
+      <p className="text-lg opacity-80 mb-10 max-w-xl mx-auto leading-relaxed">
         Transform your environment with the durability and style of {product.name}.
       </p>
-      
-      <div className="flex flex-col sm:flex-row justify-center gap-4">
+
+      <div className="flex flex-wrap justify-center gap-4">
         <Button 
           variant="outline" 
           className="h-14 px-10 rounded-full border-white/30 text-white bg-black/10 backdrop-blur-sm hover:bg-white/20 text-lg font-bold"
         >
-          <Phone className="mr-2 h-5 w-5" /> Contact Us
+          <a
+            href="https://wa.me/919909628028?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20products."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-full h-full"
+          >
+            <Phone className="mr-2 h-5 w-5" /> Contact Us
+          </a>
         </Button>
         
         <Button 
+          size="lg" 
           variant="outline" 
-          className="h-14 px-10 rounded-full border-white/30 text-white bg-black/10 backdrop-blur-sm hover:bg-white/20 text-lg font-bold"
+          className="border-white/20 bg-white/5 text-white hover:bg-white/10 px-8 py-7 text-base font-semibold rounded-full gap-2 backdrop-blur-sm transition-all"
         >
-          <FileText className="mr-2 h-5 w-5" /> Download Brochure
+          <FileText className="h-4 w-4" /> Download Brochure
         </Button>
       </div>
     </motion.div>

@@ -324,12 +324,19 @@ const productId = "hawker";
             </p>
             <div className="flex flex-wrap justify-center gap-4">
                <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-white/20 bg-white/5 text-white hover:bg-white/10 px-8 py-7 text-base font-semibold rounded-full gap-2 backdrop-blur-sm transition-all"
+          variant="outline" 
+          className="h-14 px-10 rounded-full border-white/30 text-white bg-black/10 backdrop-blur-sm hover:bg-white/20 text-lg font-bold"
+        >
+           <a
+                href="https://wa.me/919909628028?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20products."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center w-full h-full"
               >
-                <Phone className="h-4 w-4" /> Contact Us
-              </Button>
+               <Phone className="mr-2 h-5 w-5" /> Contact Us
+              </a>
+          
+        </Button>
               
                <Button 
                 size="lg" 

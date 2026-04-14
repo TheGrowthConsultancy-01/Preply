@@ -21,6 +21,7 @@ const CTASection = () => {
                 href="https://wa.me/919909628028?text=Hello%20PREPLY%20India%2C%20I%20want%20to%20discuss%20a%20project.%20Please%20connect."
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center justify-center w-full h-full gap-2"
               >
                <Phone className="h-4 w-4" /> Contact Us 
               </a>
