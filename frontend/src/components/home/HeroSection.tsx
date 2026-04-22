@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import heromain from "@/assets/hero-main.png";
 import heroImage from "@/assets/hero-factory.jpg";
-import herobanner from "@/assets/hero-banner.png";
+import herobanner from "@/assets/hero banner website_3.png";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img src={heromain} alt="PREPLY manufacturing facility transforming plastic waste into sheets" className="w-full h-full object-cover" />
+        <img src={herobanner} alt="PREPLY manufacturing facility transforming plastic waste into sheets" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-hero-gradient opacity-30" />
       </div>
 
