@@ -19,6 +19,7 @@ import ProductDetail from "./pages/ProductDetail";
 import HawkerDetail from "./pages/HawkerDetail";
 import BinDetail from "./pages/BinDetail";
 import CoffeeDetail from "./pages/CoffeeDetail";
+import InitiativeGallery from "./components/home/InitiativeGallery";
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/plastic-sheets" element={<PlasticSheets />} />
             <Route path="/impact" element={<Impact />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/gallery" element={<InitiativeGallery />} />
             <Route path="/product/:productId" element={<ProductDetail />} />
             <Route path="/product/hawker" element={<HawkerDetail />} />
             <Route path="/product/bin" element={<BinDetail />} />
