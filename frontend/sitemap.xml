@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.preplyindia.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.preplyindia.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Plastic Sheets Page -->
+  <url>
+    <loc>https://www.preplyindia.com/plastic-sheets</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Products Listing Page -->
+  <url>
+    <loc>https://www.preplyindia.com/product</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Product: Bin -->
+  <url>
+    <loc>https://www.preplyindia.com/product/bin</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Product: Chinab Sofa -->
+  <url>
+    <loc>https://www.preplyindia.com/product/chinab-sofa</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Product: Coffee Table -->
+  <url>
+    <loc>https://www.preplyindia.com/product/coffee-table</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Product: Awards -->
+  <url>
+    <loc>https://www.preplyindia.com/product/awards</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Product: Hawker -->
+  <url>
+    <loc>https://www.preplyindia.com/product/hawker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Product: Construction Sheets -->
+  <url>
+    <loc>https://www.preplyindia.com/product/construction-sheets</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Product: Custom Furniture -->
+  <url>
+    <loc>https://www.preplyindia.com/product/custom-furniture</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Gallery Page -->
+  <url>
+    <loc>https://www.preplyindia.com/gallery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Impact Page -->
+  <url>
+    <loc>https://www.preplyindia.com/impact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.preplyindia.com/contact</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
