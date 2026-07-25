@@ -44,7 +44,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-3">
           <Button variant="default" size="sm" asChild>
             <a
-              href="https://wa.me/919909628028?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20products.%20Please%20share%20details."
+              href="https://wa.me/919558597555?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20products.%20Please%20share%20details."
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -81,7 +81,7 @@ const Header = () => {
             ))}
             <Button variant="default" size="sm" className="mt-3" asChild>
               <a
-                href="https://wa.me/919909628028?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20products."
+                href="https://wa.me/919558597555?text=Hello%20PREPLY%20India%2C%20I%20am%20interested%20in%20your%20products."
                 target="_blank"
                 rel="noopener noreferrer"
               >
