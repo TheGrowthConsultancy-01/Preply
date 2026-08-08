@@ -34,7 +34,7 @@ const Contact = () => {
 
               <div className="space-y-6">
                 {[
-                  { icon: MapPin, label: "PREPLY India Pvt Ltd", detail: "Manufacturing Facility, India" },
+                  { icon: MapPin, label: "PREPLY India Pvt Ltd", detail: "Zero House , Z-476, Laxminarayan industries park,BRC Compound,Udhna, Surat,Gujarat 394210" },
                   { icon: Mail, label: "Email", detail: "info@preply.in" },
                   { icon: Phone, label: "Phone", detail: "+91 9558597555" },
                 ].map((item) => (

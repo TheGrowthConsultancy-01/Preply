@@ -54,8 +54,7 @@ const Footer = () => {
           <div>
             <h4 className="font-display font-semibold mb-4">Contact</h4>
             <div className="flex flex-col gap-2 text-sm text-background/60">
-              <p>PREPLY India Pvt Ltd</p>
-              <p>Manufacturing Facility, India</p>
+              <p>Zero House , Z-476, Laxminarayan industries park,BRC Compound,Udhna, Surat,Gujarat 394210</p>
               <a href="mailto:info@preply.in" className="hover:text-background transition-colors">
                 info@preply.in
               </a>
