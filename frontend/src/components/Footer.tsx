@@ -55,8 +55,8 @@ const Footer = () => {
             <h4 className="font-display font-semibold mb-4">Contact</h4>
             <div className="flex flex-col gap-2 text-sm text-background/60">
               <p>Zero House , Z-476, Laxminarayan industries park,BRC Compound,Udhna, Surat,Gujarat 394210</p>
-              <a href="mailto:info@preply.in" className="hover:text-background transition-colors">
-                info@preply.in
+              <a href="mailto:info@preplyindia.com" className="hover:text-background transition-colors">
+                info@preplyindia.com
               </a>
               <a
                 href="https://wa.me/919558597555"
